@@ -145,7 +145,7 @@ R1 = pd.read_csv(ROOT / "runs" / "round1_pilot" / "round1_lr_table.csv"); ch = p
 R1p = (R1.pivot(index="model", columns="lr", values="score_ep16_40") * 100).round(2)
 R1p.columns = [f"LR {c:g}" for c in R1p.columns]; R1p = R1p.reset_index(); R1p["Chosen LR"] = R1p.model.map(dict(zip(ch.model, ch.lr))).map(lambda x: f"{x:g}")
 R1p.insert(0, "Model", R1p.model.map(NICE)); R1p = R1p.drop(columns="model")
-tex(R1p, "table_lr_tuning", "Learning-rate selection on the fold-0 validation objects: mean validation macro-F1 (%) over epochs 16–40.")
+tex(R1p, "table_lr_tuning", "Learning-rate selection on the fold-1 validation objects: mean validation macro-F1 (%) over epochs 16–40.")
 
 PC = []
 for m, o in OOF.items():
@@ -160,7 +160,7 @@ tex(PCm.reset_index().rename(columns={"index": "Class"}), "table_per_class_f1", 
 pre = [m for m in S.model if S.set_index("model").training[m] == "ImageNet-pretrained"]
 acc = pd.concat([OOF[m].assign(ok=OOF[m].y_true == OOF[m].y_pred).groupby("object_id").ok.mean().rename(NICE[m]) for m in pre], axis=1)
 n = OOF[pre[0]].groupby("object_id").size().rename("Images")
-fold = OOF[pre[0]].groupby("object_id").fold.first().rename("Fold")
+fold = (OOF[pre[0]].groupby("object_id").fold.first() + 1).rename("Fold")      # paper numbers folds 1-5
 H = pd.concat([n, fold, (acc.mean(1) * 100).rename("Mean accuracy % (11 pretrained)"), (acc.min(1) * 100).rename("Worst model %"),
                (acc[NICE[best]] * 100).rename(f"{NICE[best]} %")], axis=1).sort_values("Mean accuracy % (11 pretrained)").head(15)
 tex(H.reset_index().rename(columns={"object_id": "Object"}).round(1), "table_hardest_objects", "The 15 hardest objects (lowest accuracy averaged over the 11 pretrained models).", fmt=lambda x: f"{x:.1f}")
@@ -185,7 +185,7 @@ pd.DataFrame([
     ("Mixing", "MixUp α = 0.2 / CutMix α = 1.0, applied with probability 0.5"),
     ("Optimiser", "AdamW, weight decay 1e-4, batch size 32, mixed precision"),
     ("Schedule", "5 warm-up epochs, then cosine decay to 0"),
-    ("Learning rate", "per pretrained model from {1e-3, 3e-4, 1e-4} on fold-0 validation objects; 1e-3 for models trained from scratch"),
+    ("Learning rate", "per pretrained model from {1e-3, 3e-4, 1e-4} on fold-1 validation objects; 1e-3 for models trained from scratch"),
     ("Epochs", "40 (ImageNet-pretrained), 150 (from scratch); no early stopping"),
     ("Weights evaluated", "exponential moving average (decay 0.999) of the final epoch; no test-time augmentation"),
     ("Pretraining", "ImageNet-1k weights from timm for all pretrained models"),
@@ -281,7 +281,7 @@ ax.spines[:].set_visible(False); ax.set_title("Cross-dataset accuracy per shared
 fc = pd.read_csv(REF / "fold_counts.csv", index_col=0).drop(index="total", errors="ignore").drop(columns="total", errors="ignore")
 fc = fc.loc[sorted(fc.index, key=str.lower)]
 fig, ax = plt.subplots(figsize=(4.4, 6.0)); im = ax.imshow(fc.values, cmap=SEQ, aspect="auto")
-ax.set_xticks(range(5), [f"Fold {i}" for i in range(5)]); ax.set_yticks(range(len(fc)), [ITEM[c] for c in fc.index], fontsize=7)
+ax.set_xticks(range(5), [f"Fold {i + 1}" for i in range(5)]); ax.set_yticks(range(len(fc)), [ITEM[c] for c in fc.index], fontsize=7)
 for i in range(fc.shape[0]):
     for j in range(5):
         v = fc.values[i, j]; ax.text(j, i, f"{v}", ha="center", va="center", fontsize=6.5, color="white" if v > 50 else INK)
@@ -326,7 +326,7 @@ for m in GC:
             axes[rr, cc].imshow(imgs[i]); axes[rr + 1, cc].imshow(imgs[i]); axes[rr + 1, cc].imshow(heat(cams[i], imgs[i].shape[:2]), cmap="jet", alpha=0.45)
             t = ITEM[r.true] if kind == "correct" else f"T: {ITEM[r.true]}\nP: {ITEM[r.pred]}"
             axes[rr, cc].set_title(t, fontsize=6.5, color=INK, pad=2)
-        fig.suptitle(f"Grad-CAM, {NICE[m]}, fold 0 — {'correct (most confident per class)' if kind == 'correct' else 'most confident errors'}",
+        fig.suptitle(f"Grad-CAM, {NICE[m]}, fold 1 — {'correct (most confident per class)' if kind == 'correct' else 'most confident errors'}",
                      fontsize=9, fontweight="bold", x=0.01, ha="left", y=1.0)
         fig.tight_layout(rect=(0, 0, 1, 0.98)); save(fig, f"fig_gradcam_{'mobilenetv3_scratch' if m.endswith('_scratch') else m}_{kind}")
 

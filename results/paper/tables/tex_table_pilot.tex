@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Custom-model pilot on the fold-1 tuning split (623 validation images of 23 held-out objects): final-epoch results. KD: knowledge distillation from the ConvNeXt-T teacher (temperature 4, weight 0.7).}
+\label{tab:s_pilot}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lllrrrrr@{}}
+\toprule
+Model & Initialisation & KD & Params (M) & MACs (M) & Epochs & Val. accuracy (\%) & Val. macro-F1 (\%) \\
+\midrule
+Custom CNN V0 & from scratch & no & 0.38 & 165 & 200 & 75.3 & 70.8 \\
+Custom CNN V0 & from scratch & yes & 0.38 & 165 & 200 & 79.3 & 74.2 \\
+Custom CNN V1 (redesign) & from scratch & no & 0.41 & 75 & 200 & 71.3 & 65.5 \\
+Custom CNN V1 (redesign) & from scratch & yes & 0.41 & 75 & 200 & 73.2 & 67.0 \\
+MobileNetV3-L & pretrained & no & 4.23 & 215 & 40 & 91.8 & 90.2 \\
+MobileNetV3-L & pretrained & yes & 4.23 & 215 & 40 & 91.7 & 88.6 \\
+MobileNetV3-L + multi-scale/attention neck & pretrained backbone & no & 3.34 & 229 & 40 & 90.5 & 87.3 \\
+MobileNetV3-L + multi-scale/attention neck & pretrained backbone & yes & 3.34 & 229 & 40 & 91.7 & 91.1 \\
+ConvNeXt-T (teacher) & pretrained & no & 27.84 & 4,455 & 40 & 94.1 & 93.2 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

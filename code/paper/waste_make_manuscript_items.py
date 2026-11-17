@@ -196,7 +196,7 @@ write_table("tex_table_groups_medical",
 
 # Supplementary tables: simple LaTeX from the existing CSVs
 SUPP_T = [("table_training_settings", "Training and evaluation settings.", "tab:s_settings"),
-          ("table_lr_tuning", "Learning-rate selection on the fold-0 validation objects: mean validation macro-F1 (\\%) over epochs 16--40.", "tab:s_lr"),
+          ("table_lr_tuning", "Learning-rate selection on the fold-1 validation objects: mean validation macro-F1 (\\%) over epochs 16--40.", "tab:s_lr"),
           ("table_leakage", "Random image-level split versus object-disjoint evaluation (pooled out-of-fold macro-F1, \\%).", "tab:s_leakage"),
           ("table_hardest_objects", "The 15 hardest objects (lowest accuracy averaged over the 11 pretrained models).", "tab:s_hardest"),
           ("table_shortcut", "Shortcut test: macro-F1 (\\%, mean of 5 folds) after strong JPEG compression and after resolution loss.", "tab:s_shortcut"),
@@ -215,6 +215,28 @@ for name, cap, lab in SUPP_T:
     size = "\\tiny" if name == "table_per_class_f1" else "\\scriptsize"
     write_table(f"tex_{name}", cap, lab, spec, hdr, body, size=size, star=name == "table_per_class_f1")
 
+# Table S9: custom-model pilot on the fold-1 tuning split (every run; final-epoch EMA weights)
+PL = pd.read_csv(RES / "custom_pilot" / "pilot_summary.csv")
+PNAME = {"convnext_tiny": "ConvNeXt-T (teacher)", "custom_v0": "Custom CNN V0", "custom_v1": "Custom CNN V1 (redesign)",
+         "mobilenetv3_large_100": "MobileNetV3-L", "hyb_mnv3_msa": "MobileNetV3-L + multi-scale/attention neck"}
+PINIT = {"convnext_tiny": "pretrained", "custom_v0": "from scratch", "custom_v1": "from scratch",
+         "mobilenetv3_large_100": "pretrained", "hyb_mnv3_msa": "pretrained backbone"}
+order = ["custom_v0", "custom_v1", "mobilenetv3_large_100", "hyb_mnv3_msa", "convnext_tiny"]
+PL["o"] = PL.model.map(order.index); PL = PL.sort_values(["o", "kd"])
+rows = []
+for r in PL.itertuples():
+    rows.append({"Model": PNAME[r.model], "Initialisation": PINIT[r.model], "KD": "yes" if r.kd else "no",
+                 "Params (M)": round(r.params / 1e6, 2), "MACs (M)": int(round(r.macs_M)), "Epochs": int(r.epochs),
+                 "Val. accuracy (%)": round(r.final_val_acc * 100, 1), "Val. macro-F1 (%)": round(r.final_val_macro_f1 * 100, 1)})
+PT = pd.DataFrame(rows); PT.to_csv(TAB / "table_pilot.csv", index=False)
+body = [" & ".join([latex_escape(v["Model"]), v["Initialisation"], v["KD"], f'{v["Params (M)"]:.2f}', f'{v["MACs (M)"]:,}',
+                    str(v["Epochs"]), f'{v["Val. accuracy (%)"]:.1f}', f'{v["Val. macro-F1 (%)"]:.1f}']) + " \\\\" for v in rows]
+write_table("tex_table_pilot",
+            "Custom-model pilot on the fold-1 tuning split (623 validation images of 23 held-out objects): final-epoch results. "
+            "KD: knowledge distillation from the ConvNeXt-T teacher (temperature 4, weight 0.7).",
+            "tab:s_pilot", "@{}lllrrrrr@{}",
+            "Model & Initialisation & KD & Params (M) & MACs (M) & Epochs & Val. accuracy (\\%) & Val. macro-F1 (\\%)", body, size="\\scriptsize")
+
 # ============================================================ Copy into manuscript folders
 MAIN_FIG = {"fig_samples": ROOT / "manuscript/figures/dataset/Fig1", "fig_split_protocol": FIG / "fig_split_protocol",
             "fig_accuracy_vs_macs": FIG / "fig_accuracy_vs_macs", "fig_leakage": FIG / "fig_leakage",
@@ -226,7 +248,7 @@ SUPP_FIG = {"fig_s_workflow": ROOT / "manuscript/figures/dataset/Fig3", "fig_s_c
 GRADCAM = {f"fig_s_gradcam_{m}_{k}": FIG / f"fig_gradcam_{m}_{k}" for m in ["convnext_tiny", "efficientnet_b0", "custom_v0", "mobilenetv3_scratch"]
            for k in ["correct", "wrong"]}
 MAIN_TAB = ["tex_table_dataset_comparison", "tex_table_main_results", "tex_table_groups_medical"]
-SUPP_TAB = [f"tex_{n}" for n, _, _ in SUPP_T]
+SUPP_TAB = [f"tex_{n}" for n, _, _ in SUPP_T] + ["tex_table_pilot"]
 
 if not (ROOT / 'manuscript').exists():
     print('manuscript/ not found: figures and tables written to results/paper only'); raise SystemExit
