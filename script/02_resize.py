@@ -5,7 +5,7 @@ resize so the SHORTER side is 256 px (aspect ratio kept, Lanczos), save as JPEG 
 Cropping to 224 x 224 happens later, at training time.
 Already-finished images are skipped, so the script can be stopped and restarted safely.
 
-Run:  python script/02_resize.py                (from the repository root)
+Run:  python script/02_resize.py   (from the repository root)
 Time: about 5-15 minutes (uses all CPU cores).
 """
 import os

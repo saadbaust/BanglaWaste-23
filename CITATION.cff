@@ -12,6 +12,8 @@ authors:
     given-names: Masuma
   - family-names: Ahmed
     given-names: Saad
+  - family-names: Hassan
+    given-names: Md Zahim
   - family-names: Alam
     given-names: S M Jahangir
 repository-code: "https://github.com/TODO/BanglaWaste-23"
@@ -24,7 +26,7 @@ keywords:
   - Bangladesh
 preferred-citation:
   type: article
-  title: "BanglaWaste-23: A household and hospital waste image dataset with an object-disjoint benchmark showing that random splits overstate generalisation"
+  title: "BanglaWaste-23: A household and hospital waste image dataset showing that random splits overstate accuracy on unseen objects"
   authors:
     - family-names: Jahan
       given-names: Nusrat
@@ -34,6 +36,8 @@ preferred-citation:
       given-names: Masuma
     - family-names: Ahmed
       given-names: Saad
+    - family-names: Hassan
+      given-names: Md Zahim
     - family-names: Alam
       given-names: S M Jahangir
   journal: "Waste Management"

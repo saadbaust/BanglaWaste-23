@@ -11,7 +11,7 @@ The full pipeline runs in four stages. Stage 4 alone (figures and tables from th
 
 ## Stage 1 — data
 
-1. Download the dataset from Zenodo (DOI `TODO`) and extract the images so that the folders are
+1. Download the dataset from Zenodo (DOI [10.5281/zenodo.23694940](https://doi.org/10.5281/zenodo.23694940)) and extract the images so that the folders are
    `BanglaWaste-23-raw/<class_folder>/<file_name>.jpg` in the repository root (23 class folders, 4,160 images).
    The release metadata is already in `metadata/`.
 2. Run, from the repository root:
@@ -27,7 +27,7 @@ python script/05_make_kaggle_zip.py      # zip of the resized images + splits fo
 Script 03 reproduces the files in `splits/` exactly. Line endings may differ between Windows and Linux.
 
 For the cross-dataset test, download BDWaste (Rahman et al., 2024, *Data in Brief*). Copy the class folders it shares
-with BanglaWaste-23 to `BDWaste_shared/Digestible/<class>/` and `BDWaste_shared/Indigestible/<class>/`, then run
+with BanglaWaste-23 to `work/BDWaste_shared/Digestible/<class>/` and `work/BDWaste_shared/Indigestible/<class>/`, then run
 `python script/06_resize_bdwaste.py`.
 
 ## Stage 2 — training (Kaggle notebooks)

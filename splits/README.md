@@ -21,3 +21,36 @@ Result: every class is in every fold, and no object is in two folds. Fold sizes 
 (32 / 33 / 32 / 38 / 37 objects).
 
 Never tune on the test fold. Report pooled out-of-fold metrics over all 4,160 images.
+
+## Citation
+
+Please cite the paper and the dataset if you use these files (full details in the [main README](../README.md#citation)).
+
+**Paper (arXiv preprint):**
+
+```bibtex
+@misc{jahan2026banglawaste23,
+  title         = {{BanglaWaste-23}: A household and hospital waste image dataset showing that random splits
+                   overstate accuracy on unseen objects},
+  author        = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
+  year          = {2026},
+  eprint        = {XXXX.XXXXX},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  doi           = {10.48550/arXiv.XXXX.XXXXX},
+  url           = {https://arxiv.org/abs/XXXX.XXXXX}
+}
+```
+
+**Dataset (Zenodo):**
+
+```bibtex
+@misc{banglawaste23_dataset,
+  title     = {{BanglaWaste-23}: A Fine-Grained Image Dataset of Household and Medical Waste from Bangladesh},
+  author    = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23694940},
+  url       = {https://doi.org/10.5281/zenodo.23694940}
+}
+```

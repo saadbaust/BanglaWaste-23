@@ -4,7 +4,7 @@ Writes work/kaggle_upload/banglawaste23-256.zip containing
   BanglaWaste23_256/<23 class folders>/*.jpg   and   splits/*.csv, split_info.json
 Upload it on kaggle.com -> Datasets -> New Dataset (Private), name: banglawaste23-256.
 
-Run:  python script/05_make_kaggle_zip.py       (from the repository root)
+Run:  python script/05_make_kaggle_zip.py   (from the repository root)
 """
 import zipfile
 from _paths import WORK, RESIZED, SPLITS

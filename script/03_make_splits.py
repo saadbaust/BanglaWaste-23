@@ -5,7 +5,7 @@ Writes work/splits/class_map.csv, folds.csv, fold0_val.csv, random_split.csv,
        fold_counts.csv, split_info.json
 Deterministic: running it again gives identical files. Never edit the outputs by hand.
 
-Run:  python script/03_make_splits.py           (from the repository root)
+Run:  python script/03_make_splits.py   (from the repository root)
 Time: a few seconds.
 """
 import json

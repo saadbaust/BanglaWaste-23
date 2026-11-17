@@ -5,8 +5,8 @@ Run after waste_make_figures_tables.py, from the Claude folder:
 
 Makes   results/paper/figures/fig_split_protocol, fig_crossregion_shortcut (PDF + PNG)
         results/paper/tables/table_dataset_comparison (CSV) and journal-style LaTeX tables
-Copies  main / supplementary items to  manuscript/00_shared/{figures,tables}/{main,supp}
-        and to  manuscript/01_waste_management/overleaf/{figures,tables}/{main,supp}
+Copies  main / supplementary figures to  manuscript/figures/{main,supp}
+        and figures + tables to  manuscript/overleaf/{figures,tables}/{main,supp}
 """
 import shutil
 from pathlib import Path
@@ -21,8 +21,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 RES, B3 = ROOT / "results", ROOT / "results" / "batch3"
 FIG, TAB = RES / "paper" / "figures", RES / "paper" / "tables"
-SH_ = ROOT / "manuscript" / "00_shared"
-OV = ROOT / "manuscript" / "01_waste_management" / "overleaf"
+SH_ = ROOT / "manuscript"                      # figures/ lives here
+OV = ROOT / "manuscript" / "overleaf"
 CM = pd.read_csv(RES / "class_map.csv"); ITEM = dict(zip(CM.class_folder, CM.item_name))
 
 INK, INK2, MUTED, GRID, BASE = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
@@ -216,10 +216,10 @@ for name, cap, lab in SUPP_T:
     write_table(f"tex_{name}", cap, lab, spec, hdr, body, size=size, star=name == "table_per_class_f1")
 
 # ============================================================ Copy into manuscript folders
-MAIN_FIG = {"fig_samples": ROOT / "manuscript/00_shared/figures/dataset/Fig1", "fig_split_protocol": FIG / "fig_split_protocol",
+MAIN_FIG = {"fig_samples": ROOT / "manuscript/figures/dataset/Fig1", "fig_split_protocol": FIG / "fig_split_protocol",
             "fig_accuracy_vs_macs": FIG / "fig_accuracy_vs_macs", "fig_leakage": FIG / "fig_leakage",
             "fig_crossregion_shortcut": FIG / "fig_crossregion_shortcut"}
-SUPP_FIG = {"fig_s_workflow": ROOT / "manuscript/00_shared/figures/dataset/Fig3", "fig_s_class_distribution": ROOT / "manuscript/00_shared/figures/dataset/Fig2",
+SUPP_FIG = {"fig_s_workflow": ROOT / "manuscript/figures/dataset/Fig3", "fig_s_class_distribution": ROOT / "manuscript/figures/dataset/Fig2",
             "fig_s_fold_composition": FIG / "fig_fold_composition", "fig_s_tuning_curves": FIG / "fig_supp_tuning_curves",
             "fig_s_per_class_f1": FIG / "fig_per_class_f1", "fig_s_confusion_best": FIG / "fig_confusion_best",
             "fig_s_confusion_custom_v0": FIG / "fig_confusion_custom_v0", "fig_s_bdwaste_per_class": FIG / "fig_bdwaste_per_class"}
@@ -231,7 +231,7 @@ SUPP_TAB = [f"tex_{n}" for n, _, _ in SUPP_T]
 if not (ROOT / 'manuscript').exists():
     print('manuscript/ not found: figures and tables written to results/paper only'); raise SystemExit
 for base in (SH_, OV):
-    for sub in ("figures/main", "figures/supp", "tables/main", "tables/supp"): (base / sub).mkdir(parents=True, exist_ok=True)
+    for sub in (("figures/main", "figures/supp") if base == SH_ else ("figures/main", "figures/supp", "tables/main", "tables/supp")): (base / sub).mkdir(parents=True, exist_ok=True)
 for dst, src in MAIN_FIG.items():
     shutil.copy(f"{src}.pdf", OV / "figures/main" / f"{dst}.pdf")
     for ext in ("pdf", "png"): shutil.copy(f"{src}.{ext}", SH_ / "figures/main" / f"{dst}.{ext}")
@@ -242,10 +242,9 @@ for dst, src in GRADCAM.items():                  # photo-heavy: JPEG keeps Over
     im = Image.open(f"{src}.png").convert("RGB"); im.thumbnail((2400, 2400))
     for base in (SH_, OV): im.save(base / "figures/supp" / f"{dst}.jpg", quality=88)
 for n in MAIN_TAB:
-    for base in (SH_, OV): shutil.copy(TAB / f"{n}.tex", base / "tables/main" / f"{n.replace('tex_', '')}.tex")
+    for base in (OV,): shutil.copy(TAB / f"{n}.tex", base / "tables/main" / f"{n.replace('tex_', '')}.tex")
 for n in SUPP_TAB:
-    for base in (SH_, OV): shutil.copy(TAB / f"{n}.tex", base / "tables/supp" / f"{n.replace('tex_', '')}.tex")
-for f in TAB.glob("*.csv"): shutil.copy(f, SH_ / "tables" / f.name)          # all numbers, for the writer
-shutil.copy(ROOT / "literature" / "references.bib", SH_ / "references.bib"); shutil.copy(ROOT / "literature" / "references.bib", OV / "references.bib")
+    for base in (OV,): shutil.copy(TAB / f"{n}.tex", base / "tables/supp" / f"{n.replace('tex_', '')}.tex")
+shutil.copy(ROOT / "literature" / "references.bib", OV / "references.bib")
 print("main figures:", list(MAIN_FIG)); print("main tables:", MAIN_TAB)
 print("supp figures:", len(SUPP_FIG) + len(GRADCAM), "supp tables:", len(SUPP_TAB))

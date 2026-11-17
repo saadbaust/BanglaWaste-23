@@ -3,7 +3,7 @@
 Checks for all 4,160 images: file exists, byte size, MD5 checksum, width/height, opens as RGB JPEG,
 and that no extra files are on disk. Writes work/logs/01_verify_report.csv and prints a summary.
 
-Run:  python script/01_verify_dataset.py        (from the repository root)
+Run:  python script/01_verify_dataset.py   (from the repository root)
 Time: about 5-10 minutes (reads all 14 GB).
 """
 import hashlib

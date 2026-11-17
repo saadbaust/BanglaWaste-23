@@ -1,13 +1,13 @@
 """Resize the BDWaste shared-class images exactly like BanglaWaste-23 (script 02), then zip them for Kaggle.
 
-Input : BDWaste_shared\Digestible\<class>\*.jpg  and  BDWaste_shared\Indigestible\<class>\*.jpg   (dataset root)
+Input : work\BDWaste_shared\Digestible\<class>\*.jpg  and  work\BDWaste_shared\Indigestible\<class>\*.jpg
 Output: work\BDWaste_shared_256\  (same folder structure, same file names)
         work\logs\06_bdwaste_sizes.csv
         work\kaggle_upload\bdwaste-shared-256.zip   -> upload this to Kaggle as the dataset "bdwaste"
 Method: EXIF orientation applied, 8-bit RGB, shorter side 256 px (aspect ratio kept, Lanczos), JPEG quality 95.
 Already-finished images are skipped, so the script can be stopped and restarted safely.
 
-Run:  python script/06_resize_bdwaste.py        (from the repository root)
+Run:  python script/06_resize_bdwaste.py   (from the repository root)
 Time: about 2-5 minutes.
 """
 import os, sys, zipfile
@@ -18,7 +18,7 @@ from PIL import Image, ImageOps
 from _paths import ROOT, WORK, LOGS
 
 SIZE = 256
-SRC = ROOT / "BDWaste_shared"
+SRC = WORK / "BDWaste_shared"
 DST = Path(sys.argv[1]) if len(sys.argv) > 1 else WORK / "BDWaste_shared_256"
 EXT = {".jpg", ".jpeg", ".png"}
 

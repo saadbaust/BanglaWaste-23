@@ -5,7 +5,7 @@ no object in two folds, every fold-0 validation object outside fold 0.
 Writes work/logs/04_preview_grid.jpg (2 random images per class) - OPEN IT and look:
 images upright, not squashed, correct class.
 
-Run:  python script/04_check_and_preview.py     (from the repository root)
+Run:  python script/04_check_and_preview.py   (from the repository root)
 """
 import random
 import pandas as pd

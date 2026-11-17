@@ -15,3 +15,36 @@
 | `master_results.xlsx` | Main tables in one workbook |
 
 Model names in the files are timm names: for example, `convnext_tiny` is ConvNeXt-T and `custom_v0` is the custom CNN V0.
+
+## Citation
+
+Please cite the paper and the dataset if you use these files (full details in the [main README](../README.md#citation)).
+
+**Paper (arXiv preprint):**
+
+```bibtex
+@misc{jahan2026banglawaste23,
+  title         = {{BanglaWaste-23}: A household and hospital waste image dataset showing that random splits
+                   overstate accuracy on unseen objects},
+  author        = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
+  year          = {2026},
+  eprint        = {XXXX.XXXXX},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  doi           = {10.48550/arXiv.XXXX.XXXXX},
+  url           = {https://arxiv.org/abs/XXXX.XXXXX}
+}
+```
+
+**Dataset (Zenodo):**
+
+```bibtex
+@misc{banglawaste23_dataset,
+  title     = {{BanglaWaste-23}: A Fine-Grained Image Dataset of Household and Medical Waste from Bangladesh},
+  author    = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23694940},
+  url       = {https://doi.org/10.5281/zenodo.23694940}
+}
+```
