@@ -1,0 +1,7 @@
+{
+  "model": "mobilenetv2_100",
+  "lr": 0.0003,
+  "epochs": 40,
+  "split": "cv",
+  "fold": 2
+}

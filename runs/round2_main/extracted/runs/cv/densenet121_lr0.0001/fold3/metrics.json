@@ -1,0 +1,42 @@
+{
+  "run": "densenet121_lr0.0001",
+  "split": "cv",
+  "fold": 3,
+  "eval_set": "test",
+  "model": "densenet121",
+  "timm_tag": "densenet121.ra_in1k",
+  "pretrained": true,
+  "lr": 0.0001,
+  "epochs": 40,
+  "batch": 32,
+  "weight_decay": 0.0001,
+  "warmup_epochs": 5,
+  "ema_decay": 0.999,
+  "seed": 45,
+  "params": 6977431,
+  "macs_M": 2833.161216,
+  "train_images": 3420,
+  "eval_images": 740,
+  "minutes": 11.864209266503652,
+  "sec_per_epoch": 17.796313917636873,
+  "gpu_infer_img_per_s": 441.2466479493475,
+  "cache_in_ram": true,
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "slot": "waste_R2_acc1_nb2",
+  "accuracy": 0.9986486486486487,
+  "macro_f1": 0.9987225888865233,
+  "balanced_accuracy": 0.9988851727982163,
+  "weighted_f1": 0.9986509502902946
+}

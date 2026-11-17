@@ -1,0 +1,6 @@
+{
+  "model": "efficientnet_b0",
+  "lr": 0.0003,
+  "epochs": 40,
+  "split": "all_bdwaste"
+}

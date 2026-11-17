@@ -1,0 +1,173 @@
+object_id,class_folder,n_images,first_file,last_file,indoor_outdoor,lighting,background,background_notes
+Banana_peeling_obj01,Banana_peeling,26,Banana_peeling_img_00001.jpg,Banana_peeling_img_00026.jpg,Indoor,Natural,White/light sheet,
+Banana_peeling_obj02,Banana_peeling,48,Banana_peeling_img_00027.jpg,Banana_peeling_img_00074.jpg,Indoor,Mixed,Mixed,"light sheet, dark surface"
+Banana_peeling_obj03,Banana_peeling,8,Banana_peeling_img_00075.jpg,Banana_peeling_img_00082.jpg,Indoor,Natural,Patterned cloth,
+Banana_peeling_obj04,Banana_peeling,44,Banana_peeling_img_00083.jpg,Banana_peeling_img_00126.jpg,Indoor,Natural,White/light sheet,
+Banana_peeling_obj05,Banana_peeling,30,Banana_peeling_img_00127.jpg,Banana_peeling_img_00156.jpg,Indoor,Natural,Mixed,"wood, dark blue, purple"
+Bottle_obj01,Bottle,24,Bottle_img_00001.jpg,Bottle_img_00026.jpg,Indoor,Mixed,Mixed,"concrete floor, dark cloth"
+Bottle_obj02,Bottle,69,Bottle_img_00027.jpg,Bottle_img_00095.jpg,Indoor,Mixed,Mixed,"concrete floor, white sheet, dark cloth, pink sheet"
+Bottle_obj03,Bottle,18,Bottle_img_00096.jpg,Bottle_img_00113.jpg,Indoor,Natural,Wooden surface,
+Bottle_obj04,Bottle,8,Bottle_img_00114.jpg,Bottle_img_00121.jpg,Indoor,Natural,Wooden surface,
+Bottle_obj05,Bottle,13,Bottle_img_00122.jpg,Bottle_img_00134.jpg,Indoor,Natural,Wooden surface,
+Bottle_obj06,Bottle,41,Bottle_img_00135.jpg,Bottle_img_00175.jpg,Indoor,Natural,Wooden surface,
+Bottle_obj07,Bottle,25,Bottle_img_00176.jpg,Bottle_img_00200.jpg,Indoor,Natural,Tile/concrete floor,
+Bottle_obj08,Bottle,6,Bottle_img_00201.jpg,Bottle_img_00206.jpg,Indoor,Flash,Wooden surface,
+cloth_obj01,cloth,5,cloth_img_00001.jpg,cloth_img_00005.jpg,Indoor,Flash,Dark surface,
+cloth_obj02,cloth,13,cloth_img_00006.jpg,cloth_img_00018.jpg,Indoor,Natural,Dark surface,
+cloth_obj03,cloth,14,cloth_img_00019.jpg,cloth_img_00032.jpg,Indoor,Flash,Dark surface,
+cloth_obj04,cloth,76,cloth_img_00033.jpg,cloth_img_00108.jpg,Indoor,Natural,Dark surface,
+cloth_obj05,cloth,29,cloth_img_00109.jpg,cloth_img_00137.jpg,Indoor,Natural,Mixed,"white net, dark surface"
+cloth_obj06,cloth,12,cloth_img_00138.jpg,cloth_img_00149.jpg,Indoor,Natural,White/light sheet,
+cloth_obj07,cloth,10,cloth_img_00150.jpg,cloth_img_00159.jpg,Indoor,Natural,Plain coloured sheet,
+cloth_obj08,cloth,8,cloth_img_00160.jpg,cloth_img_00167.jpg,Indoor,Natural,Plain coloured sheet,
+cloth_obj09,cloth,41,cloth_img_00168.jpg,cloth_img_00208.jpg,Indoor,Natural,Mixed,white and coloured sheets
+cotton_obj01,cotton,29,cotton_img_00001.jpg,cotton_img_00029.jpg,Indoor,Natural,Mixed,"dark surface, grey sheet"
+cotton_obj02,cotton,7,cotton_img_00030.jpg,cotton_img_00036.jpg,Indoor,Natural,Patterned cloth,
+cotton_obj03,cotton,12,cotton_img_00037.jpg,cotton_img_00048.jpg,Indoor,Natural,Plain coloured sheet,
+cotton_obj04,cotton,12,cotton_img_00049.jpg,cotton_img_00060.jpg,Indoor,Natural,Plain coloured sheet,
+cotton_obj05,cotton,66,cotton_img_00061.jpg,cotton_img_00126.jpg,Indoor,Natural,Mixed,"maroon, navy and dark sheets"
+cotton_obj06,cotton,11,cotton_img_00127.jpg,cotton_img_00137.jpg,Indoor,Natural,Wooden surface,
+cotton_obj07,cotton,31,cotton_img_00138.jpg,cotton_img_00168.jpg,Indoor,Natural,Mixed,"dark red, pink and yellow sheets"
+cotton_obj08,cotton,32,cotton_img_00169.jpg,cotton_img_00200.jpg,Indoor,Natural,Mixed,"red sheet, dark surface"
+cucumber_peeling_obj01,cucumber_peeling,9,cucumber_peeling_img_00001.jpg,cucumber_peeling_img_00009.jpg,Indoor,Natural,White/light sheet,
+cucumber_peeling_obj02,cucumber_peeling,9,cucumber_peeling_img_00010.jpg,cucumber_peeling_img_00018.jpg,Indoor,Natural,Plain coloured sheet,
+cucumber_peeling_obj03,cucumber_peeling,11,cucumber_peeling_img_00019.jpg,cucumber_peeling_img_00029.jpg,Indoor,Natural,White/light sheet,
+cucumber_peeling_obj04,cucumber_peeling,16,cucumber_peeling_img_00030.jpg,cucumber_peeling_img_00045.jpg,Indoor,Natural,Wooden surface,
+cucumber_peeling_obj05,cucumber_peeling,33,cucumber_peeling_img_00046.jpg,cucumber_peeling_img_00078.jpg,Indoor,Natural,Mixed,dark and light cloth
+cucumber_peeling_obj06,cucumber_peeling,15,cucumber_peeling_img_00079.jpg,cucumber_peeling_img_00093.jpg,Indoor,Flash,Dark surface,
+cucumber_peeling_obj07,cucumber_peeling,15,cucumber_peeling_img_00094.jpg,cucumber_peeling_img_00108.jpg,Indoor,Natural,Wooden surface,
+cucumber_peeling_obj08,cucumber_peeling,38,cucumber_peeling_img_00109.jpg,cucumber_peeling_img_00146.jpg,Indoor,Natural,Plain coloured sheet,
+cucumber_peeling_obj09,cucumber_peeling,6,cucumber_peeling_img_00147.jpg,cucumber_peeling_img_00152.jpg,Indoor,Natural,Plain coloured sheet,
+Egg_obj01,Egg,32,Egg_img_00001.jpg,Egg_img_00032.jpg,Indoor,Natural,Mixed,"tile floor, patterned cloth, plate"
+Egg_obj02,Egg,51,Egg_img_00033.jpg,Egg_img_00083.jpg,Indoor,Natural,Mixed,"woven mat, cloth, concrete, wood"
+Egg_obj03,Egg,47,Egg_img_00084.jpg,Egg_img_00130.jpg,Outdoor,Natural,Soil/ground,"soil, grass, tree trunk"
+Egg_obj04,Egg,26,Egg_img_00131.jpg,Egg_img_00156.jpg,Indoor,Natural,White/light sheet,
+Egg_obj05,Egg,55,Egg_img_00157.jpg,Egg_img_00211.jpg,Indoor,Mixed,Mixed,"black glossy surface, wooden table"
+Injection_obj01,Injection,19,Injection_img_00001.jpg,Injection_img_00019.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj02,Injection,18,Injection_img_00020.jpg,Injection_img_00037.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj03,Injection,21,Injection_img_00038.jpg,Injection_img_00058.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj04,Injection,24,Injection_img_00059.jpg,Injection_img_00082.jpg,Indoor,Natural,White/light sheet,
+Injection_obj05,Injection,22,Injection_img_00083.jpg,Injection_img_00104.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj06,Injection,32,Injection_img_00105.jpg,Injection_img_00136.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj07,Injection,33,Injection_img_00137.jpg,Injection_img_00169.jpg,Indoor,Natural,Plain coloured sheet,
+Injection_obj08,Injection,16,Injection_img_00170.jpg,Injection_img_00185.jpg,Indoor,Natural,White/light sheet,
+Injection_obj09,Injection,18,Injection_img_00186.jpg,Injection_img_00203.jpg,Indoor,Natural,Plain coloured sheet,
+Lemon_obj01,Lemon,6,Lemon_img_00001.jpg,Lemon_img_00006.jpg,Indoor,Flash,Wooden surface,
+Lemon_obj02,Lemon,49,Lemon_img_00007.jpg,Lemon_img_00055.jpg,Indoor,Natural,Mixed,"wood, white and dark surfaces"
+Lemon_obj03,Lemon,24,Lemon_img_00056.jpg,Lemon_img_00079.jpg,Indoor,Mixed,Mixed,"blue sheet, dark surface"
+Lemon_obj04,Lemon,44,Lemon_img_00080.jpg,Lemon_img_00123.jpg,Indoor,Natural,White/light sheet,
+Lemon_obj05,Lemon,12,Lemon_img_00124.jpg,Lemon_img_00135.jpg,Indoor,Natural,Patterned cloth,
+Lemon_obj06,Lemon,21,Lemon_img_00136.jpg,Lemon_img_00156.jpg,Indoor,Natural,Mixed,grey cloth and other surfaces
+malta_peeling_obj01,malta_peeling,24,malta_peeling_img_00001.jpg,malta_peeling_img_00024.jpg,Indoor,Natural,White/light sheet,
+malta_peeling_obj02,malta_peeling,24,malta_peeling_img_00025.jpg,malta_peeling_img_00048.jpg,Indoor,Flash,Tile/concrete floor,
+malta_peeling_obj03,malta_peeling,28,malta_peeling_img_00049.jpg,malta_peeling_img_00078.jpg,Indoor,Flash,Tile/concrete floor,
+malta_peeling_obj04,malta_peeling,19,malta_peeling_img_00079.jpg,malta_peeling_img_00099.jpg,Indoor,Flash,Mixed,"dark blue sheet, white sheet"
+malta_peeling_obj05,malta_peeling,12,malta_peeling_img_00102.jpg,malta_peeling_img_00113.jpg,Indoor,Natural,Plain coloured sheet,
+malta_peeling_obj06,malta_peeling,34,malta_peeling_img_00114.jpg,malta_peeling_img_00147.jpg,Indoor,Mixed,Mixed,"white sheet, black surface"
+mango_leaf_obj01,mango_leaf,64,mango_leaf_img_00001.jpg,mango_leaf_img_00064.jpg,Indoor,Natural,White/light sheet,
+mango_leaf_obj02,mango_leaf,13,mango_leaf_img_00065.jpg,mango_leaf_img_00077.jpg,Indoor,Natural,White/light sheet,
+mango_leaf_obj03,mango_leaf,40,mango_leaf_img_00078.jpg,mango_leaf_img_00117.jpg,Indoor,Natural,White/light sheet,
+mango_leaf_obj04,mango_leaf,58,mango_leaf_img_00118.jpg,mango_leaf_img_00175.jpg,Indoor,Natural,White/light sheet,
+mango_leaf_obj05,mango_leaf,11,mango_leaf_img_00176.jpg,mango_leaf_img_00186.jpg,Indoor,Natural,White/light sheet,
+mango_peeling_obj01,mango_peeling,40,mango_peeling_img_00001.jpg,mango_peeling_img_00040.jpg,Indoor,Mixed,Mixed,"white, teal and dark surfaces"
+mango_peeling_obj02,mango_peeling,23,mango_peeling_img_00041.jpg,mango_peeling_img_00063.jpg,Indoor,Natural,Mixed,white and pink sheets
+mango_peeling_obj03,mango_peeling,17,mango_peeling_img_00064.jpg,mango_peeling_img_00080.jpg,Indoor,Natural,Wooden surface,
+mango_peeling_obj04,mango_peeling,28,mango_peeling_img_00081.jpg,mango_peeling_img_00108.jpg,Indoor,Natural,Mixed,"red sheet, wood, patterned cloth"
+mango_peeling_obj05,mango_peeling,24,mango_peeling_img_00109.jpg,mango_peeling_img_00132.jpg,Indoor,Natural,Mixed,white and blue sheets
+mango_peeling_obj06,mango_peeling,10,mango_peeling_img_00133.jpg,mango_peeling_img_00142.jpg,Indoor,Natural,Plain coloured sheet,
+mango_peeling_obj07,mango_peeling,6,mango_peeling_img_00143.jpg,mango_peeling_img_00148.jpg,Indoor,Natural,White/light sheet,
+mango_peeling_obj08,mango_peeling,7,mango_peeling_img_00149.jpg,mango_peeling_img_00155.jpg,Indoor,Natural,Other,background mostly hidden by peels
+medicine_obj01,medicine,26,medicine_img_00001.jpg,medicine_img_00026.jpg,Indoor,Natural,Mixed,dark and grey surfaces
+medicine_obj02,medicine,15,medicine_img_00027.jpg,medicine_img_00041.jpg,Indoor,Natural,Plain coloured sheet,
+medicine_obj03,medicine,28,medicine_img_00042.jpg,medicine_img_00069.jpg,Indoor,Natural,Mixed,"red and maroon sheets, wood"
+medicine_obj04,medicine,31,medicine_img_00070.jpg,medicine_img_00100.jpg,Indoor,Mixed,Mixed,"wood, dark surface"
+medicine_obj05,medicine,69,medicine_img_00101.jpg,medicine_img_00169.jpg,Indoor,Mixed,Mixed,"dark surface, blue sheet"
+nut_obj01,nut,23,nut_img_00001.jpg,nut_img_00023.jpg,Indoor,Natural,Mixed,"teal, green, yellow sheets, dark surface"
+nut_obj02,nut,42,nut_img_00024.jpg,nut_img_00066.jpg,Indoor,Natural,Mixed,"lavender, white, purple sheets, wood"
+nut_obj03,nut,22,nut_img_00068.jpg,nut_img_00089.jpg,Indoor,Natural,Mixed,"wood, dark and white surfaces"
+nut_obj04,nut,52,nut_img_00090.jpg,nut_img_00141.jpg,Indoor,Natural,Mixed,white and blue sheets
+nut_obj05,nut,4,nut_img_00142.jpg,nut_img_00145.jpg,Indoor,Natural,Wooden surface,
+nut_obj06,nut,4,nut_img_00146.jpg,nut_img_00149.jpg,Indoor,Natural,White/light sheet,
+nut_obj07,nut,8,nut_img_00150.jpg,nut_img_00159.jpg,Indoor,Natural,Mixed,pink and light sheets
+nut_obj08,nut,10,nut_img_00160.jpg,nut_img_00169.jpg,Indoor,Natural,White/light sheet,
+orange_peeling_obj01,orange_peeling,21,orange_peeling_img_00001.jpg,orange_peeling_img_00021.jpg,Indoor,Natural,Mixed,"wood, teal sheet"
+orange_peeling_obj02,orange_peeling,25,orange_peeling_img_00022.jpg,orange_peeling_img_00046.jpg,Indoor,Natural,White/light sheet,
+orange_peeling_obj03,orange_peeling,25,orange_peeling_img_00047.jpg,orange_peeling_img_00071.jpg,Indoor,Natural,Tile/concrete floor,
+orange_peeling_obj04,orange_peeling,28,orange_peeling_img_00072.jpg,orange_peeling_img_00099.jpg,Indoor,Natural,Plain coloured sheet,
+orange_peeling_obj05,orange_peeling,19,orange_peeling_img_00100.jpg,orange_peeling_img_00118.jpg,Indoor,Natural,Plain coloured sheet,
+orange_peeling_obj06,orange_peeling,25,orange_peeling_img_00119.jpg,orange_peeling_img_00143.jpg,Indoor,Mixed,Wooden surface,
+orange_peeling_obj07,orange_peeling,23,orange_peeling_img_00144.jpg,orange_peeling_img_00166.jpg,Indoor,Natural,Wooden surface,
+orange_peeling_obj08,orange_peeling,11,orange_peeling_img_00167.jpg,orange_peeling_img_00177.jpg,Indoor,Natural,White/light sheet,
+orange_peeling_obj09,orange_peeling,7,orange_peeling_img_00178.jpg,orange_peeling_img_00184.jpg,Indoor,Mixed,Wooden surface,
+orange_peeling_obj10,orange_peeling,27,orange_peeling_img_00185.jpg,orange_peeling_img_00211.jpg,Indoor,Natural,Plain coloured sheet,
+packet_obj01,packet,73,packet_img_00001.jpg,packet_img_00073.jpg,Indoor,Natural,Mixed,white and dark surfaces
+packet_obj02,packet,11,packet_img_00074.jpg,packet_img_00084.jpg,Indoor,Natural,Mixed,pink and white sheets
+packet_obj03,packet,7,packet_img_00085.jpg,packet_img_00091.jpg,Indoor,Natural,Plain coloured sheet,
+packet_obj04,packet,19,packet_img_00092.jpg,packet_img_00110.jpg,Indoor,Natural,Mixed,several surfaces
+packet_obj05,packet,22,packet_img_00111.jpg,packet_img_00132.jpg,Indoor,Natural,Wooden surface,
+packet_obj06,packet,55,packet_img_00133.jpg,packet_img_00187.jpg,Indoor,Mixed,Mixed,"wood, dark surface"
+packet_obj07,packet,24,packet_img_00188.jpg,packet_img_00211.jpg,Indoor,Natural,Mixed,several surfaces
+pen_obj01,pen,21,pen_img_00001.jpg,pen_img_00021.jpg,Indoor,Natural,Wooden surface,
+pen_obj02,pen,27,pen_img_00022.jpg,pen_img_00048.jpg,Indoor,Natural,Dark surface,
+pen_obj03,pen,55,pen_img_00049.jpg,pen_img_00103.jpg,Indoor,Natural,Mixed,"blue sheet, white sheet, wood"
+pen_obj04,pen,11,pen_img_00104.jpg,pen_img_00114.jpg,Indoor,Natural,Dark surface,
+pen_obj05,pen,39,pen_img_00115.jpg,pen_img_00153.jpg,Indoor,Natural,Mixed,"dark sheet, wood"
+pen_obj06,pen,37,pen_img_00154.jpg,pen_img_00190.jpg,Indoor,Natural,Mixed,"wood, grey sheet"
+pointed_gourd_peeling_obj01,pointed_gourd_peeling,45,pointed_gourd_peeling_img_00001.jpg,pointed_gourd_peeling_img_00045.jpg,Outdoor,Natural,Mixed,"rough stone ground, grass, sack, bowl, basket, mat (mostly outdoor; a few images on bowl/basket/mat)"
+pointed_gourd_peeling_obj02,pointed_gourd_peeling,31,pointed_gourd_peeling_img_00046.jpg,pointed_gourd_peeling_img_00076.jpg,Indoor,Natural,Mixed,"bowl, red tray, woven mat"
+pointed_gourd_peeling_obj03,pointed_gourd_peeling,19,pointed_gourd_peeling_img_00077.jpg,pointed_gourd_peeling_img_00095.jpg,Indoor,Natural,Mixed,dark and grey surfaces
+pointed_gourd_peeling_obj04,pointed_gourd_peeling,20,pointed_gourd_peeling_img_00096.jpg,pointed_gourd_peeling_img_00115.jpg,Indoor,Natural,Mixed,grey and brown sheets
+pointed_gourd_peeling_obj05,pointed_gourd_peeling,23,pointed_gourd_peeling_img_00116.jpg,pointed_gourd_peeling_img_00138.jpg,Indoor,Natural,White/light sheet,
+pointed_gourd_peeling_obj06,pointed_gourd_peeling,33,pointed_gourd_peeling_img_00139.jpg,pointed_gourd_peeling_img_00171.jpg,Indoor,Natural,Mixed,light and pink sheets
+pointed_gourd_peeling_obj07,pointed_gourd_peeling,13,pointed_gourd_peeling_img_00172.jpg,pointed_gourd_peeling_img_00184.jpg,Indoor,Natural,Wooden surface,
+pointed_gourd_peeling_obj08,pointed_gourd_peeling,8,pointed_gourd_peeling_img_00185.jpg,pointed_gourd_peeling_img_00192.jpg,Indoor,Natural,Plain coloured sheet,
+polythene_obj01,polythene,11,polythene_img_00001.jpg,polythene_img_00011.jpg,Indoor,Natural,Wooden surface,
+polythene_obj02,polythene,12,polythene_img_00012.jpg,polythene_img_00023.jpg,Indoor,Natural,Wooden surface,
+polythene_obj03,polythene,3,polythene_img_00024.jpg,polythene_img_00026.jpg,Indoor,Natural,Tile/concrete floor,
+polythene_obj04,polythene,16,polythene_img_00027.jpg,polythene_img_00042.jpg,Indoor,Natural,Mixed,"tile floor, wood"
+polythene_obj05,polythene,4,polythene_img_00043.jpg,polythene_img_00046.jpg,Indoor,Natural,Wooden surface,
+polythene_obj06,polythene,17,polythene_img_00047.jpg,polythene_img_00063.jpg,Indoor,Natural,Mixed,"wood, tile floor"
+polythene_obj07,polythene,23,polythene_img_00064.jpg,polythene_img_00086.jpg,Indoor,Natural,Tile/concrete floor,
+polythene_obj08,polythene,9,polythene_img_00087.jpg,polythene_img_00095.jpg,Indoor,Natural,Tile/concrete floor,
+polythene_obj09,polythene,19,polythene_img_00096.jpg,polythene_img_00114.jpg,Indoor,Natural,Tile/concrete floor,
+polythene_obj10,polythene,40,polythene_img_00115.jpg,polythene_img_00154.jpg,Indoor,Natural,Mixed,"tile floor, wood"
+potato_peeling_obj01,potato_peeling,7,potato_peeling_img_00001.jpg,potato_peeling_img_00007.jpg,Indoor,Natural,Plate/bowl/tray,
+potato_peeling_obj02,potato_peeling,15,potato_peeling_img_00008.jpg,potato_peeling_img_00022.jpg,Indoor,Natural,Wooden surface,
+potato_peeling_obj03,potato_peeling,77,potato_peeling_img_00023.jpg,potato_peeling_img_00099.jpg,Indoor,Mixed,Mixed,"white, black, blue and grey surfaces"
+potato_peeling_obj04,potato_peeling,48,potato_peeling_img_00100.jpg,potato_peeling_img_00147.jpg,Indoor,Mixed,Mixed,"red, black, pink and green surfaces"
+potato_peeling_obj05,potato_peeling,20,potato_peeling_img_00148.jpg,potato_peeling_img_00167.jpg,Indoor,Natural,White/light sheet,
+pumpkin_obj01,pumpkin,18,pumpkin_img_00001.jpg,pumpkin_img_00018.jpg,Indoor,Natural,White/light sheet,
+pumpkin_obj02,pumpkin,8,pumpkin_img_00019.jpg,pumpkin_img_00026.jpg,Indoor,Natural,Wooden surface,
+pumpkin_obj03,pumpkin,18,pumpkin_img_00027.jpg,pumpkin_img_00044.jpg,Indoor,Natural,Wooden surface,
+pumpkin_obj04,pumpkin,15,pumpkin_img_00045.jpg,pumpkin_img_00059.jpg,Indoor,Mixed,Mixed,"white sheet, dark surface"
+pumpkin_obj05,pumpkin,12,pumpkin_img_00060.jpg,pumpkin_img_00071.jpg,Indoor,Flash,Dark surface,
+pumpkin_obj06,pumpkin,10,pumpkin_img_00072.jpg,pumpkin_img_00081.jpg,Indoor,Natural,Plain coloured sheet,
+pumpkin_obj07,pumpkin,37,pumpkin_img_00082.jpg,pumpkin_img_00118.jpg,Indoor,Natural,White/light sheet,
+pumpkin_obj08,pumpkin,14,pumpkin_img_00119.jpg,pumpkin_img_00132.jpg,Indoor,Flash,Dark surface,
+pumpkin_obj09,pumpkin,20,pumpkin_img_00133.jpg,pumpkin_img_00152.jpg,Indoor,Natural,Plain coloured sheet,
+pumpkin_obj10,pumpkin,12,pumpkin_img_00153.jpg,pumpkin_img_00164.jpg,Indoor,Natural,White/light sheet,
+saline_obj01,saline,11,saline_img_00001.jpg,saline_img_00011.jpg,Indoor,Natural,Plain coloured sheet,
+saline_obj02,saline,33,saline_img_00012.jpg,saline_img_00044.jpg,Indoor,Natural,Mixed,orange and light sheets
+saline_obj03,saline,16,saline_img_00045.jpg,saline_img_00060.jpg,Indoor,Natural,Plain coloured sheet,
+saline_obj04,saline,23,saline_img_00061.jpg,saline_img_00083.jpg,Indoor,Natural,White/light sheet,
+saline_obj05,saline,20,saline_img_00084.jpg,saline_img_00103.jpg,Indoor,Natural,Plain coloured sheet,
+saline_obj06,saline,21,saline_img_00104.jpg,saline_img_00124.jpg,Indoor,Natural,White/light sheet,
+saline_obj07,saline,20,saline_img_00125.jpg,saline_img_00144.jpg,Indoor,Natural,Mixed,lavender and blue sheets
+saline_obj08,saline,20,saline_img_00145.jpg,saline_img_00164.jpg,Indoor,Natural,White/light sheet,
+saline_obj09,saline,18,saline_img_00165.jpg,saline_img_00182.jpg,Indoor,Mixed,Mixed,"dark surface, red sheet"
+saline_obj10,saline,27,saline_img_00183.jpg,saline_img_00209.jpg,Indoor,Natural,Plain coloured sheet,
+sugarcane_obj01,sugarcane,9,sugarcane_img_00001.jpg,sugarcane_img_00009.jpg,Indoor,Natural,Mixed,"dark and white surfaces, basket"
+sugarcane_obj02,sugarcane,38,sugarcane_img_00010.jpg,sugarcane_img_00047.jpg,Indoor,Natural,Mixed,"red, white and yellow sheets, dark surface"
+sugarcane_obj03,sugarcane,54,sugarcane_img_00048.jpg,sugarcane_img_00101.jpg,Indoor,Natural,Mixed,several surfaces
+sugarcane_obj04,sugarcane,26,sugarcane_img_00102.jpg,sugarcane_img_00127.jpg,Indoor,Natural,Mixed,grey and dark surfaces
+sugarcane_obj05,sugarcane,16,sugarcane_img_00128.jpg,sugarcane_img_00143.jpg,Indoor,Natural,Mixed,green and teal sheets
+sugarcane_obj06,sugarcane,63,sugarcane_img_00144.jpg,sugarcane_img_00206.jpg,Indoor,Natural,Mixed,"pink and purple sheets, dark surface"
+watermelon_obj01,watermelon,15,watermelon_img_00001.jpg,watermelon_img_00015.jpg,Indoor,Natural,Plain coloured sheet,
+watermelon_obj02,watermelon,15,watermelon_img_00016.jpg,watermelon_img_00030.jpg,Indoor,Natural,White/light sheet,
+watermelon_obj03,watermelon,28,watermelon_img_00031.jpg,watermelon_img_00058.jpg,Indoor,Natural,Mixed,"pink, blue and green sheets"
+watermelon_obj04,watermelon,15,watermelon_img_00059.jpg,watermelon_img_00073.jpg,Indoor,Natural,Tile/concrete floor,
+watermelon_obj05,watermelon,22,watermelon_img_00074.jpg,watermelon_img_00095.jpg,Indoor,Natural,Mixed,"yellow sheet, wood"
+watermelon_obj06,watermelon,8,watermelon_img_00096.jpg,watermelon_img_00103.jpg,Indoor,Flash,Dark surface,
+watermelon_obj07,watermelon,20,watermelon_img_00104.jpg,watermelon_img_00123.jpg,Indoor,Natural,White/light sheet,
+watermelon_obj08,watermelon,9,watermelon_img_00124.jpg,watermelon_img_00132.jpg,Indoor,Flash,Wooden surface,
+watermelon_obj09,watermelon,18,watermelon_img_00133.jpg,watermelon_img_00150.jpg,Indoor,Natural,Tile/concrete floor,

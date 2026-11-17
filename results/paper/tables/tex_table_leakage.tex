@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Random image-level split versus object-disjoint evaluation (pooled out-of-fold macro-F1, \%).}
+\label{tab:s_leakage}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model & Training & Random split macro-F1 \% & Object-disjoint macro-F1 \% & Gap (pp) \\
+\midrule
+ConvNeXt-T & ImageNet-pretrained & 100 & 98.82 & 1.18 \\
+MobileNetV3-L & ImageNet-pretrained & 100 & 97.91 & 2.09 \\
+MobileViTv2 & ImageNet-pretrained & 100 & 98.52 & 1.48 \\
+Custom CNN (V0) & from scratch & 96.87 & 81.42 & 15.45 \\
+MobileNetV3-L (scratch) & from scratch & 98.21 & 79.54 & 18.67 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

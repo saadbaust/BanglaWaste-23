@@ -1,0 +1,6 @@
+{
+  "model": "efficientformerv2_s0",
+  "lr": 0.001,
+  "epochs": 80,
+  "split": "fold0_val"
+}

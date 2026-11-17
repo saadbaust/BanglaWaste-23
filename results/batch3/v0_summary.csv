@@ -1,0 +1,2 @@
+model,name,lr,epochs,params_M,macs_M,acc_mean,acc_sd,macro_f1_mean,macro_f1_sd,oof_acc,oof_macro_f1,oof_macro_f1_ci_low,oof_macro_f1_ci_high,mcnemar_p_vs_convnext,train_min_per_fold
+custom_v0,"V0 (custom CNN, from scratch)",0.001,150,0.378263,165.126208,0.8191344972810553,0.032525688505301624,0.7992098270572822,0.03265299619418546,0.8197115384615384,0.8142192216631953,0.75632836525263,0.8295981281362326,1.642522731873614e-151,24.348715940316517

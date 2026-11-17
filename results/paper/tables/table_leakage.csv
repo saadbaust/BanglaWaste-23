@@ -1,0 +1,6 @@
+Model,Training,Random split macro-F1 %,Object-disjoint macro-F1 %,Gap (pp)
+ConvNeXt-T,ImageNet-pretrained,100.0,98.82,1.18
+MobileNetV3-L,ImageNet-pretrained,100.0,97.91,2.09
+MobileViTv2,ImageNet-pretrained,100.0,98.52,1.48
+Custom CNN (V0),from scratch,96.87,81.42,15.45
+MobileNetV3-L (scratch),from scratch,98.21,79.54,18.67

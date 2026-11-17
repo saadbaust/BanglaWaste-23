@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this code, the splits or the BanglaWaste-23 dataset, please cite it as below."
+title: "BanglaWaste-23: code, splits and results"
+type: software
+license: MIT
+authors:
+  - family-names: Jahan
+    given-names: Nusrat
+  - family-names: Esha
+    given-names: Mst. Eshrat Jahan
+  - family-names: Sadia
+    given-names: Masuma
+  - family-names: Ahmed
+    given-names: Saad
+  - family-names: Alam
+    given-names: S M Jahangir
+repository-code: "https://github.com/TODO/BanglaWaste-23"
+keywords:
+  - waste classification
+  - medical waste
+  - image dataset
+  - data leakage
+  - object-disjoint evaluation
+  - Bangladesh
+preferred-citation:
+  type: article
+  title: "BanglaWaste-23: A household and hospital waste image dataset with an object-disjoint benchmark showing that random splits overstate generalisation"
+  authors:
+    - family-names: Jahan
+      given-names: Nusrat
+    - family-names: Esha
+      given-names: Mst. Eshrat Jahan
+    - family-names: Sadia
+      given-names: Masuma
+    - family-names: Ahmed
+      given-names: Saad
+    - family-names: Alam
+      given-names: S M Jahangir
+  journal: "Waste Management"
+  year: 2026
+  notes: "Under review"

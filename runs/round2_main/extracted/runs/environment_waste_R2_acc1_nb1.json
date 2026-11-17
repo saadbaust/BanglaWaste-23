@@ -1,0 +1,80 @@
+{
+  "slot": "waste_R2_acc1_nb1",
+  "jobs": [
+    {
+      "model": "convnext_tiny",
+      "lr": 0.0003,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 0
+    },
+    {
+      "model": "convnext_tiny",
+      "lr": 0.0003,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 1
+    },
+    {
+      "model": "convnext_tiny",
+      "lr": 0.0003,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 2
+    },
+    {
+      "model": "convnext_tiny",
+      "lr": 0.0003,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 3
+    },
+    {
+      "model": "convnext_tiny",
+      "lr": 0.0003,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 4
+    },
+    {
+      "model": "mobilenetv4_conv_small",
+      "lr": 0.0001,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 0
+    },
+    {
+      "model": "mobilenetv4_conv_small",
+      "lr": 0.0001,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 1
+    },
+    {
+      "model": "mobilenetv4_conv_small",
+      "lr": 0.0001,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 2
+    },
+    {
+      "model": "mobilenetv4_conv_small",
+      "lr": 0.0001,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 3
+    },
+    {
+      "model": "mobilenetv4_conv_small",
+      "lr": 0.0001,
+      "epochs": 40,
+      "split": "cv",
+      "fold": 4
+    }
+  ],
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "gpu": "Tesla T4",
+  "finished": "2026-11-16 10:39:06"
+}

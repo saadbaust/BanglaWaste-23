@@ -1,0 +1,12 @@
+Dataset,Year,Images,Classes,Source,Medical waste,Object IDs,Evaluation split
+TrashNet,2016,"2,527",6,"Real, staged on white board",No,No,Not stated
+TACO,2020,"1,500",60,"Real, crowdsourced litter",No,No,"Random, image-level"
+TrashBox,2022,"17,785",7,Web-scraped,Yes (web),No,Not stated
+ZeroWaste-f,2022,"4,661",4,"Real, recycling conveyor",No,No,Not stated
+Zhou et al.,2022,"3,480",8,"Real, hospital (China)",Yes (all),No,"Random, image-level"
+RealWaste,2023,"4,808",9,"Real, landfill",No,No,"Random, image-level"
+Medical Waste 4.0,2023,">1,400",7,"Real, new unused items",Yes (all),No,Different-day test set
+BDWaste,2024,"2,497",20,"Real, street (Dhaka)",Street-collected,No,"Random, image-level"
+TrashNeXt,2025,"23,625",9,Merged public sets,Yes (merged),No,"Random, image-level"
+Garbage Dataset,2026,"12,259",10,"App, web and community",No,No,"Random, image-level"
+BanglaWaste-23 (ours),2026,"4,160",23,"Real, households and hospital","Yes (4 classes, hospital)",Yes (172 objects),Object-disjoint 5-fold

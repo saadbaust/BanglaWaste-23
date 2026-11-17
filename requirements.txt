@@ -1,0 +1,14 @@
+# Training (run on Kaggle, NVIDIA T4)
+torch>=2.2
+torchvision>=0.17
+timm>=1.0
+fvcore
+grad-cam
+# Data preparation, analysis, figures (CPU)
+numpy>=1.26
+pandas>=2.0
+pillow>=10.0
+scikit-learn>=1.4
+statsmodels>=0.14
+matplotlib>=3.8
+openpyxl>=3.1

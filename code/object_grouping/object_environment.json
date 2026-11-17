@@ -1,0 +1,618 @@
+{
+ "_note": "Indoor for all objects (stated by the team). Lighting: Natural unless phone-flash light (hard light: bright hot spot, sharp glare, dark surroundings) was seen in the images during a visual check of 5 evenly spaced images per object. Flash = most images; Mixed = some images. To be confirmed by the team. Outdoor set for objects photographed on uneven ground (soil, stone, grass). Background judged visually from 5 sample images per object; Mixed = several backgrounds (listed in notes).",
+ "_default": {
+  "indoor_outdoor": "Indoor",
+  "lighting": "Natural"
+ },
+ "Bottle_obj08": {
+  "lighting": "Flash",
+  "background": "Wooden surface"
+ },
+ "cucumber_peeling_obj06": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "malta_peeling_obj02": {
+  "lighting": "Flash",
+  "background": "Tile/concrete floor"
+ },
+ "malta_peeling_obj03": {
+  "lighting": "Flash",
+  "background": "Tile/concrete floor"
+ },
+ "malta_peeling_obj04": {
+  "lighting": "Flash",
+  "background": "Mixed",
+  "notes": "dark blue sheet, white sheet"
+ },
+ "watermelon_obj06": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "watermelon_obj08": {
+  "lighting": "Flash",
+  "background": "Wooden surface"
+ },
+ "pumpkin_obj05": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "pumpkin_obj08": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "Lemon_obj01": {
+  "lighting": "Flash",
+  "background": "Wooden surface"
+ },
+ "cloth_obj01": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "cloth_obj03": {
+  "lighting": "Flash",
+  "background": "Dark surface"
+ },
+ "Banana_peeling_obj02": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "light sheet, dark surface"
+ },
+ "Bottle_obj01": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "concrete floor, dark cloth"
+ },
+ "Bottle_obj02": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "concrete floor, white sheet, dark cloth, pink sheet"
+ },
+ "Lemon_obj03": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "blue sheet, dark surface"
+ },
+ "malta_peeling_obj06": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "white sheet, black surface"
+ },
+ "mango_peeling_obj01": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "white, teal and dark surfaces"
+ },
+ "Egg_obj05": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "black glossy surface, wooden table"
+ },
+ "medicine_obj04": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "wood, dark surface"
+ },
+ "medicine_obj05": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "dark surface, blue sheet"
+ },
+ "potato_peeling_obj03": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "white, black, blue and grey surfaces"
+ },
+ "potato_peeling_obj04": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "red, black, pink and green surfaces"
+ },
+ "pumpkin_obj04": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "white sheet, dark surface"
+ },
+ "orange_peeling_obj06": {
+  "lighting": "Mixed",
+  "background": "Wooden surface"
+ },
+ "orange_peeling_obj09": {
+  "lighting": "Mixed",
+  "background": "Wooden surface"
+ },
+ "packet_obj06": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "wood, dark surface"
+ },
+ "saline_obj09": {
+  "lighting": "Mixed",
+  "background": "Mixed",
+  "notes": "dark surface, red sheet"
+ },
+ "Banana_peeling_obj01": {
+  "background": "White/light sheet"
+ },
+ "Banana_peeling_obj03": {
+  "background": "Patterned cloth"
+ },
+ "Banana_peeling_obj04": {
+  "background": "White/light sheet"
+ },
+ "Banana_peeling_obj05": {
+  "background": "Mixed",
+  "notes": "wood, dark blue, purple"
+ },
+ "Bottle_obj03": {
+  "background": "Wooden surface"
+ },
+ "Bottle_obj04": {
+  "background": "Wooden surface"
+ },
+ "Bottle_obj05": {
+  "background": "Wooden surface"
+ },
+ "Bottle_obj06": {
+  "background": "Wooden surface"
+ },
+ "Bottle_obj07": {
+  "background": "Tile/concrete floor"
+ },
+ "cloth_obj02": {
+  "background": "Dark surface"
+ },
+ "cloth_obj04": {
+  "background": "Dark surface"
+ },
+ "cloth_obj05": {
+  "background": "Mixed",
+  "notes": "white net, dark surface"
+ },
+ "cloth_obj06": {
+  "background": "White/light sheet"
+ },
+ "cloth_obj07": {
+  "background": "Plain coloured sheet"
+ },
+ "cloth_obj08": {
+  "background": "Plain coloured sheet"
+ },
+ "cloth_obj09": {
+  "background": "Mixed",
+  "notes": "white and coloured sheets"
+ },
+ "cotton_obj01": {
+  "background": "Mixed",
+  "notes": "dark surface, grey sheet"
+ },
+ "cotton_obj02": {
+  "background": "Patterned cloth"
+ },
+ "cotton_obj03": {
+  "background": "Plain coloured sheet"
+ },
+ "cotton_obj04": {
+  "background": "Plain coloured sheet"
+ },
+ "cotton_obj05": {
+  "background": "Mixed",
+  "notes": "maroon, navy and dark sheets"
+ },
+ "cotton_obj06": {
+  "background": "Wooden surface"
+ },
+ "cotton_obj07": {
+  "background": "Mixed",
+  "notes": "dark red, pink and yellow sheets"
+ },
+ "cotton_obj08": {
+  "background": "Mixed",
+  "notes": "red sheet, dark surface"
+ },
+ "cucumber_peeling_obj01": {
+  "background": "White/light sheet"
+ },
+ "cucumber_peeling_obj02": {
+  "background": "Plain coloured sheet"
+ },
+ "cucumber_peeling_obj03": {
+  "background": "White/light sheet"
+ },
+ "cucumber_peeling_obj04": {
+  "background": "Wooden surface"
+ },
+ "cucumber_peeling_obj05": {
+  "background": "Mixed",
+  "notes": "dark and light cloth"
+ },
+ "cucumber_peeling_obj07": {
+  "background": "Wooden surface"
+ },
+ "cucumber_peeling_obj08": {
+  "background": "Plain coloured sheet"
+ },
+ "cucumber_peeling_obj09": {
+  "background": "Plain coloured sheet"
+ },
+ "Egg_obj01": {
+  "background": "Mixed",
+  "notes": "tile floor, patterned cloth, plate"
+ },
+ "Egg_obj02": {
+  "background": "Mixed",
+  "notes": "woven mat, cloth, concrete, wood"
+ },
+ "Egg_obj03": {
+  "background": "Soil/ground",
+  "notes": "soil, grass, tree trunk",
+  "indoor_outdoor": "Outdoor"
+ },
+ "Egg_obj04": {
+  "background": "White/light sheet"
+ },
+ "Injection_obj01": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj02": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj03": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj04": {
+  "background": "White/light sheet"
+ },
+ "Injection_obj05": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj06": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj07": {
+  "background": "Plain coloured sheet"
+ },
+ "Injection_obj08": {
+  "background": "White/light sheet"
+ },
+ "Injection_obj09": {
+  "background": "Plain coloured sheet"
+ },
+ "Lemon_obj02": {
+  "background": "Mixed",
+  "notes": "wood, white and dark surfaces"
+ },
+ "Lemon_obj04": {
+  "background": "White/light sheet"
+ },
+ "Lemon_obj05": {
+  "background": "Patterned cloth"
+ },
+ "Lemon_obj06": {
+  "background": "Mixed",
+  "notes": "grey cloth and other surfaces"
+ },
+ "malta_peeling_obj01": {
+  "background": "White/light sheet"
+ },
+ "malta_peeling_obj05": {
+  "background": "Plain coloured sheet"
+ },
+ "mango_leaf_obj01": {
+  "background": "White/light sheet"
+ },
+ "mango_leaf_obj02": {
+  "background": "White/light sheet"
+ },
+ "mango_leaf_obj03": {
+  "background": "White/light sheet"
+ },
+ "mango_leaf_obj04": {
+  "background": "White/light sheet"
+ },
+ "mango_leaf_obj05": {
+  "background": "White/light sheet"
+ },
+ "mango_peeling_obj02": {
+  "background": "Mixed",
+  "notes": "white and pink sheets"
+ },
+ "mango_peeling_obj03": {
+  "background": "Wooden surface"
+ },
+ "mango_peeling_obj04": {
+  "background": "Mixed",
+  "notes": "red sheet, wood, patterned cloth"
+ },
+ "mango_peeling_obj05": {
+  "background": "Mixed",
+  "notes": "white and blue sheets"
+ },
+ "mango_peeling_obj06": {
+  "background": "Plain coloured sheet"
+ },
+ "mango_peeling_obj07": {
+  "background": "White/light sheet"
+ },
+ "mango_peeling_obj08": {
+  "background": "Other",
+  "notes": "background mostly hidden by peels"
+ },
+ "medicine_obj01": {
+  "background": "Mixed",
+  "notes": "dark and grey surfaces"
+ },
+ "medicine_obj02": {
+  "background": "Plain coloured sheet"
+ },
+ "medicine_obj03": {
+  "background": "Mixed",
+  "notes": "red and maroon sheets, wood"
+ },
+ "nut_obj01": {
+  "background": "Mixed",
+  "notes": "teal, green, yellow sheets, dark surface"
+ },
+ "nut_obj02": {
+  "background": "Mixed",
+  "notes": "lavender, white, purple sheets, wood"
+ },
+ "nut_obj03": {
+  "background": "Mixed",
+  "notes": "wood, dark and white surfaces"
+ },
+ "nut_obj04": {
+  "background": "Mixed",
+  "notes": "white and blue sheets"
+ },
+ "nut_obj05": {
+  "background": "Wooden surface"
+ },
+ "nut_obj06": {
+  "background": "White/light sheet"
+ },
+ "nut_obj07": {
+  "background": "Mixed",
+  "notes": "pink and light sheets"
+ },
+ "nut_obj08": {
+  "background": "White/light sheet"
+ },
+ "orange_peeling_obj01": {
+  "background": "Mixed",
+  "notes": "wood, teal sheet"
+ },
+ "orange_peeling_obj02": {
+  "background": "White/light sheet"
+ },
+ "orange_peeling_obj03": {
+  "background": "Tile/concrete floor"
+ },
+ "orange_peeling_obj04": {
+  "background": "Plain coloured sheet"
+ },
+ "orange_peeling_obj05": {
+  "background": "Plain coloured sheet"
+ },
+ "orange_peeling_obj07": {
+  "background": "Wooden surface"
+ },
+ "orange_peeling_obj08": {
+  "background": "White/light sheet"
+ },
+ "orange_peeling_obj10": {
+  "background": "Plain coloured sheet"
+ },
+ "packet_obj01": {
+  "background": "Mixed",
+  "notes": "white and dark surfaces"
+ },
+ "packet_obj02": {
+  "background": "Mixed",
+  "notes": "pink and white sheets"
+ },
+ "packet_obj03": {
+  "background": "Plain coloured sheet"
+ },
+ "packet_obj04": {
+  "background": "Mixed",
+  "notes": "several surfaces"
+ },
+ "packet_obj05": {
+  "background": "Wooden surface"
+ },
+ "packet_obj07": {
+  "background": "Mixed",
+  "notes": "several surfaces"
+ },
+ "pen_obj01": {
+  "background": "Wooden surface"
+ },
+ "pen_obj02": {
+  "background": "Dark surface"
+ },
+ "pen_obj03": {
+  "background": "Mixed",
+  "notes": "blue sheet, white sheet, wood"
+ },
+ "pen_obj04": {
+  "background": "Dark surface"
+ },
+ "pen_obj05": {
+  "background": "Mixed",
+  "notes": "dark sheet, wood"
+ },
+ "pen_obj06": {
+  "background": "Mixed",
+  "notes": "wood, grey sheet"
+ },
+ "pointed_gourd_peeling_obj01": {
+  "background": "Mixed",
+  "notes": "rough stone ground, grass, sack, bowl, basket, mat (mostly outdoor; a few images on bowl/basket/mat)",
+  "indoor_outdoor": "Outdoor"
+ },
+ "pointed_gourd_peeling_obj02": {
+  "background": "Mixed",
+  "notes": "bowl, red tray, woven mat"
+ },
+ "pointed_gourd_peeling_obj03": {
+  "background": "Mixed",
+  "notes": "dark and grey surfaces"
+ },
+ "pointed_gourd_peeling_obj04": {
+  "background": "Mixed",
+  "notes": "grey and brown sheets"
+ },
+ "pointed_gourd_peeling_obj05": {
+  "background": "White/light sheet"
+ },
+ "pointed_gourd_peeling_obj06": {
+  "background": "Mixed",
+  "notes": "light and pink sheets"
+ },
+ "pointed_gourd_peeling_obj07": {
+  "background": "Wooden surface"
+ },
+ "pointed_gourd_peeling_obj08": {
+  "background": "Plain coloured sheet"
+ },
+ "polythene_obj01": {
+  "background": "Wooden surface"
+ },
+ "polythene_obj02": {
+  "background": "Wooden surface"
+ },
+ "polythene_obj03": {
+  "background": "Tile/concrete floor"
+ },
+ "polythene_obj04": {
+  "background": "Mixed",
+  "notes": "tile floor, wood"
+ },
+ "polythene_obj05": {
+  "background": "Wooden surface"
+ },
+ "polythene_obj06": {
+  "background": "Mixed",
+  "notes": "wood, tile floor"
+ },
+ "polythene_obj07": {
+  "background": "Tile/concrete floor"
+ },
+ "polythene_obj08": {
+  "background": "Tile/concrete floor"
+ },
+ "polythene_obj09": {
+  "background": "Tile/concrete floor"
+ },
+ "polythene_obj10": {
+  "background": "Mixed",
+  "notes": "tile floor, wood"
+ },
+ "potato_peeling_obj01": {
+  "background": "Plate/bowl/tray"
+ },
+ "potato_peeling_obj02": {
+  "background": "Wooden surface"
+ },
+ "potato_peeling_obj05": {
+  "background": "White/light sheet"
+ },
+ "pumpkin_obj01": {
+  "background": "White/light sheet"
+ },
+ "pumpkin_obj02": {
+  "background": "Wooden surface"
+ },
+ "pumpkin_obj03": {
+  "background": "Wooden surface"
+ },
+ "pumpkin_obj06": {
+  "background": "Plain coloured sheet"
+ },
+ "pumpkin_obj07": {
+  "background": "White/light sheet"
+ },
+ "pumpkin_obj09": {
+  "background": "Plain coloured sheet"
+ },
+ "pumpkin_obj10": {
+  "background": "White/light sheet"
+ },
+ "saline_obj01": {
+  "background": "Plain coloured sheet"
+ },
+ "saline_obj02": {
+  "background": "Mixed",
+  "notes": "orange and light sheets"
+ },
+ "saline_obj03": {
+  "background": "Plain coloured sheet"
+ },
+ "saline_obj04": {
+  "background": "White/light sheet"
+ },
+ "saline_obj05": {
+  "background": "Plain coloured sheet"
+ },
+ "saline_obj06": {
+  "background": "White/light sheet"
+ },
+ "saline_obj07": {
+  "background": "Mixed",
+  "notes": "lavender and blue sheets"
+ },
+ "saline_obj08": {
+  "background": "White/light sheet"
+ },
+ "saline_obj10": {
+  "background": "Plain coloured sheet"
+ },
+ "sugarcane_obj01": {
+  "background": "Mixed",
+  "notes": "dark and white surfaces, basket"
+ },
+ "sugarcane_obj02": {
+  "background": "Mixed",
+  "notes": "red, white and yellow sheets, dark surface"
+ },
+ "sugarcane_obj03": {
+  "background": "Mixed",
+  "notes": "several surfaces"
+ },
+ "sugarcane_obj04": {
+  "background": "Mixed",
+  "notes": "grey and dark surfaces"
+ },
+ "sugarcane_obj05": {
+  "background": "Mixed",
+  "notes": "green and teal sheets"
+ },
+ "sugarcane_obj06": {
+  "background": "Mixed",
+  "notes": "pink and purple sheets, dark surface"
+ },
+ "watermelon_obj01": {
+  "background": "Plain coloured sheet"
+ },
+ "watermelon_obj02": {
+  "background": "White/light sheet"
+ },
+ "watermelon_obj03": {
+  "background": "Mixed",
+  "notes": "pink, blue and green sheets"
+ },
+ "watermelon_obj04": {
+  "background": "Tile/concrete floor"
+ },
+ "watermelon_obj05": {
+  "background": "Mixed",
+  "notes": "yellow sheet, wood"
+ },
+ "watermelon_obj07": {
+  "background": "White/light sheet"
+ },
+ "watermelon_obj09": {
+  "background": "Tile/concrete floor"
+ }
+}

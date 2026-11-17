@@ -1,0 +1,6 @@
+{
+  "model": "mobilenetv4_conv_small",
+  "lr": 0.0003,
+  "epochs": 80,
+  "split": "fold0_val"
+}

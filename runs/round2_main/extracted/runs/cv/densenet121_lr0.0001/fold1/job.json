@@ -1,0 +1,7 @@
+{
+  "model": "densenet121",
+  "lr": 0.0001,
+  "epochs": 40,
+  "split": "cv",
+  "fold": 1
+}

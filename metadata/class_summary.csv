@@ -1,0 +1,24 @@
+class_folder,image_count,percent_of_total,object_count,file_extensions,min/median/max width,min/median/max height,total_size_MB,mean_file_size_MB,devices,first_file_name,last_file_name
+Banana_peeling,156,3.75,5,.jpg (156),2992/2992/3456,2992/2992/3456,426.48,2.734,Samsung Galaxy M32 (126); Samsung Galaxy M31 (30),Banana_peeling_img_00001.jpg,Banana_peeling_img_00156.jpg
+Bottle,204,4.9,8,.jpg (204),874/2992/2992,873/2992/2992,307.1,1.505,Samsung Galaxy M32 (204),Bottle_img_00001.jpg,Bottle_img_00206.jpg
+cloth,208,5.0,9,.jpg (208),2992/3456/3456,2992/3456/3456,859.35,4.131,Samsung Galaxy M31 (105); Samsung Galaxy M32 (103),cloth_img_00001.jpg,cloth_img_00208.jpg
+cotton,200,4.81,8,.jpg (200),3456/3456/3456,3456/3456/3456,1000.9,5.004,Samsung Galaxy M31 (200),cotton_img_00001.jpg,cotton_img_00200.jpg
+cucumber_peeling,152,3.65,9,.jpg (152),2992/2992/2992,2992/2992/2992,389.81,2.565,Samsung Galaxy M32 (152),cucumber_peeling_img_00001.jpg,cucumber_peeling_img_00152.jpg
+Egg,211,5.07,5,.jpg (211),2992/3456/3456,2992/3456/3456,1084.44,5.14,Samsung Galaxy M31 (130); Samsung Galaxy M32 (81),Egg_img_00001.jpg,Egg_img_00211.jpg
+Injection,203,4.88,9,.jpg (203),3456/3456/3456,3456/3456/3456,1008.09,4.966,Samsung Galaxy M31 (203),Injection_img_00001.jpg,Injection_img_00203.jpg
+Lemon,156,3.75,6,.jpg (156),2992/2992/2992,2992/2992/2992,372.33,2.387,Samsung Galaxy M32 (156),Lemon_img_00001.jpg,Lemon_img_00156.jpg
+malta_peeling,141,3.39,6,.jpg (141),960/960/1280,960/1280/1280,12.42,0.088,Samsung Galaxy M32 (141),malta_peeling_img_00001.jpg,malta_peeling_img_00147.jpg
+mango_leaf,186,4.47,5,.jpg (186),3072/4080/4080,3072/3072/4080,307.16,1.651,Xiaomi Redmi Note 11 (186),mango_leaf_img_00001.jpg,mango_leaf_img_00186.jpg
+mango_peeling,155,3.73,8,.jpg (155),2992/2992/3456,2992/2992/3456,582.38,3.757,Samsung Galaxy M32 (85); Samsung Galaxy M31 (70),mango_peeling_img_00001.jpg,mango_peeling_img_00155.jpg
+medicine,169,4.06,5,.jpg (169),2992/2992/3456,2992/2992/3456,773.11,4.575,Samsung Galaxy M32 (100); Samsung Galaxy M31 (69),medicine_img_00001.jpg,medicine_img_00169.jpg
+nut,165,3.97,8,.jpg (165),513/2992/4160,513/2992/3120,286.14,1.734,vivo Y20i (83); Samsung Galaxy M32 (82),nut_img_00001.jpg,nut_img_00169.jpg
+orange_peeling,211,5.07,10,.jpg (211),2992/3456/3456,2992/3456/3456,849.7,4.027,Samsung Galaxy M31 (142); Samsung Galaxy M32 (69),orange_peeling_img_00001.jpg,orange_peeling_img_00211.jpg
+packet,211,5.07,7,.jpg (211),2992/3456/3456,2992/3456/3456,985.61,4.671,Samsung Galaxy M31 (110); Samsung Galaxy M32 (101),packet_img_00001.jpg,packet_img_00211.jpg
+pen,190,4.57,6,.jpg (190),2992/2992/3456,2992/2992/3456,719.15,3.785,Samsung Galaxy M32 (103); Samsung Galaxy M31 (87),pen_img_00001.jpg,pen_img_00190.jpg
+pointed_gourd_peeling,192,4.62,8,.jpg (192),3456/3456/3456,3456/3456/3456,1121.62,5.842,Samsung Galaxy M31 (192),pointed_gourd_peeling_img_00001.jpg,pointed_gourd_peeling_img_00192.jpg
+polythene,154,3.7,10,.jpg (154),2992/2992/2992,2992/2992/2992,391.09,2.54,Samsung Galaxy M32 (154),polythene_img_00001.jpg,polythene_img_00154.jpg
+potato_peeling,167,4.01,5,.jpg (167),2992/2992/3456,2992/2992/3456,619.42,3.709,Samsung Galaxy M32 (84); Samsung Galaxy M31 (83),potato_peeling_img_00001.jpg,potato_peeling_img_00167.jpg
+pumpkin,164,3.94,10,.jpg (164),2992/3456/3456,2992/3456/3456,608.59,3.711,Samsung Galaxy M31 (83); Samsung Galaxy M32 (81),pumpkin_img_00001.jpg,pumpkin_img_00164.jpg
+saline,209,5.02,10,.jpg (209),3456/3456/3456,3456/3456/3456,1069.66,5.118,Samsung Galaxy M31 (209),saline_img_00001.jpg,saline_img_00209.jpg
+sugarcane,206,4.95,6,.jpg (206),2992/3456/3456,2992/3456/3456,468.46,2.274,Samsung Galaxy M31 (106); Samsung Galaxy M32 (100),sugarcane_img_00001.jpg,sugarcane_img_00206.jpg
+watermelon,150,3.61,9,.jpg (150),2992/3456/3456,2992/3456/3456,548.4,3.656,Samsung Galaxy M31 (80); Samsung Galaxy M32 (70),watermelon_img_00001.jpg,watermelon_img_00150.jpg

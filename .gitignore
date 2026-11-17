@@ -1,0 +1,21 @@
+# images and generated data (download from Zenodo; scripts write to work/)
+BanglaWaste-23-raw/
+BDWaste_shared/
+work/
+*.zip
+# model weights and large arrays
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.npz
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

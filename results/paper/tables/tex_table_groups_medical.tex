@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{Accuracy at the level of the three waste groups (food and plant, household non-food, medical) and errors involving medical waste (pooled out-of-fold predictions; 781 medical images).}
+\label{tab:medical}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Model & Group acc. (\%) & Medical recall (\%) & Medical precision (\%) & Medical $\rightarrow$ other & Other $\rightarrow$ medical \\
+\midrule
+ConvNeXt-T & 99.95 & 99.74 & 100.00 & 2 & 0 \\
+ResNet-50 & 99.93 & 100.00 & 99.87 & 0 & 1 \\
+MobileViTv2 & 99.93 & 100.00 & 100.00 & 0 & 0 \\
+DenseNet-121 & 99.90 & 100.00 & 99.74 & 0 & 2 \\
+DeiT-S & 99.78 & 99.36 & 99.87 & 5 & 1 \\
+EfficientNet-B0 & 99.76 & 99.87 & 99.87 & 1 & 1 \\
+MobileNetV3-L & 99.69 & 99.74 & 99.36 & 2 & 5 \\
+MobileNetV2 & 99.62 & 99.23 & 99.61 & 6 & 3 \\
+GhostNetV2 & 99.90 & 100.00 & 100.00 & 0 & 0 \\
+EfficientFormerV2-S0 & 99.78 & 99.62 & 99.87 & 3 & 1 \\
+MobileNetV4-S & 99.30 & 99.10 & 98.98 & 7 & 8 \\
+\midrule
+Custom CNN V0 (from scratch) & 94.95 & 89.12 & 93.05 & 85 & 52 \\
+MobileNetV3-L (from scratch) & 93.94 & 87.20 & 92.91 & 100 & 52 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

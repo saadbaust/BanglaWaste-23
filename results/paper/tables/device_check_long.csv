@@ -1,0 +1,105 @@
+model,class,device,images,accuracy
+ConvNeXt-T,Banana_peeling,Samsung Galaxy M31,30,1.0
+ConvNeXt-T,Banana_peeling,Samsung Galaxy M32,126,1.0
+ConvNeXt-T,Egg,Samsung Galaxy M31,130,1.0
+ConvNeXt-T,Egg,Samsung Galaxy M32,81,1.0
+ConvNeXt-T,cloth,Samsung Galaxy M31,105,1.0
+ConvNeXt-T,cloth,Samsung Galaxy M32,103,1.0
+ConvNeXt-T,mango_peeling,Samsung Galaxy M31,70,0.8857142857142857
+ConvNeXt-T,mango_peeling,Samsung Galaxy M32,85,0.9882352941176471
+ConvNeXt-T,medicine,Samsung Galaxy M31,69,0.9710144927536232
+ConvNeXt-T,medicine,Samsung Galaxy M32,100,1.0
+ConvNeXt-T,nut,Samsung Galaxy M32,82,1.0
+ConvNeXt-T,nut,vivo Y20i,83,1.0
+ConvNeXt-T,orange_peeling,Samsung Galaxy M31,142,1.0
+ConvNeXt-T,orange_peeling,Samsung Galaxy M32,69,1.0
+ConvNeXt-T,packet,Samsung Galaxy M31,110,1.0
+ConvNeXt-T,packet,Samsung Galaxy M32,101,1.0
+ConvNeXt-T,pen,Samsung Galaxy M31,87,1.0
+ConvNeXt-T,pen,Samsung Galaxy M32,103,1.0
+ConvNeXt-T,potato_peeling,Samsung Galaxy M31,83,0.7349397590361446
+ConvNeXt-T,potato_peeling,Samsung Galaxy M32,84,0.9880952380952381
+ConvNeXt-T,pumpkin,Samsung Galaxy M31,83,1.0
+ConvNeXt-T,pumpkin,Samsung Galaxy M32,81,1.0
+ConvNeXt-T,sugarcane,Samsung Galaxy M31,106,1.0
+ConvNeXt-T,sugarcane,Samsung Galaxy M32,100,1.0
+ConvNeXt-T,watermelon,Samsung Galaxy M31,80,1.0
+ConvNeXt-T,watermelon,Samsung Galaxy M32,70,1.0
+EfficientNet-B0,Banana_peeling,Samsung Galaxy M31,30,1.0
+EfficientNet-B0,Banana_peeling,Samsung Galaxy M32,126,0.9841269841269841
+EfficientNet-B0,Egg,Samsung Galaxy M31,130,0.9769230769230769
+EfficientNet-B0,Egg,Samsung Galaxy M32,81,0.9876543209876543
+EfficientNet-B0,cloth,Samsung Galaxy M31,105,1.0
+EfficientNet-B0,cloth,Samsung Galaxy M32,103,1.0
+EfficientNet-B0,mango_peeling,Samsung Galaxy M31,70,0.7
+EfficientNet-B0,mango_peeling,Samsung Galaxy M32,85,0.9764705882352941
+EfficientNet-B0,medicine,Samsung Galaxy M31,69,0.9855072463768116
+EfficientNet-B0,medicine,Samsung Galaxy M32,100,1.0
+EfficientNet-B0,nut,Samsung Galaxy M32,82,1.0
+EfficientNet-B0,nut,vivo Y20i,83,1.0
+EfficientNet-B0,orange_peeling,Samsung Galaxy M31,142,1.0
+EfficientNet-B0,orange_peeling,Samsung Galaxy M32,69,1.0
+EfficientNet-B0,packet,Samsung Galaxy M31,110,0.990909090909091
+EfficientNet-B0,packet,Samsung Galaxy M32,101,0.9900990099009901
+EfficientNet-B0,pen,Samsung Galaxy M31,87,1.0
+EfficientNet-B0,pen,Samsung Galaxy M32,103,1.0
+EfficientNet-B0,potato_peeling,Samsung Galaxy M31,83,0.8554216867469879
+EfficientNet-B0,potato_peeling,Samsung Galaxy M32,84,0.9523809523809523
+EfficientNet-B0,pumpkin,Samsung Galaxy M31,83,0.9759036144578314
+EfficientNet-B0,pumpkin,Samsung Galaxy M32,81,0.9876543209876543
+EfficientNet-B0,sugarcane,Samsung Galaxy M31,106,1.0
+EfficientNet-B0,sugarcane,Samsung Galaxy M32,100,1.0
+EfficientNet-B0,watermelon,Samsung Galaxy M31,80,1.0
+EfficientNet-B0,watermelon,Samsung Galaxy M32,70,0.9857142857142858
+MobileNetV3-L,Banana_peeling,Samsung Galaxy M31,30,0.9666666666666667
+MobileNetV3-L,Banana_peeling,Samsung Galaxy M32,126,1.0
+MobileNetV3-L,Egg,Samsung Galaxy M31,130,0.9692307692307692
+MobileNetV3-L,Egg,Samsung Galaxy M32,81,1.0
+MobileNetV3-L,cloth,Samsung Galaxy M31,105,1.0
+MobileNetV3-L,cloth,Samsung Galaxy M32,103,1.0
+MobileNetV3-L,mango_peeling,Samsung Galaxy M31,70,0.7
+MobileNetV3-L,mango_peeling,Samsung Galaxy M32,85,0.9647058823529412
+MobileNetV3-L,medicine,Samsung Galaxy M31,69,0.9710144927536232
+MobileNetV3-L,medicine,Samsung Galaxy M32,100,1.0
+MobileNetV3-L,nut,Samsung Galaxy M32,82,1.0
+MobileNetV3-L,nut,vivo Y20i,83,1.0
+MobileNetV3-L,orange_peeling,Samsung Galaxy M31,142,1.0
+MobileNetV3-L,orange_peeling,Samsung Galaxy M32,69,1.0
+MobileNetV3-L,packet,Samsung Galaxy M31,110,0.990909090909091
+MobileNetV3-L,packet,Samsung Galaxy M32,101,1.0
+MobileNetV3-L,pen,Samsung Galaxy M31,87,1.0
+MobileNetV3-L,pen,Samsung Galaxy M32,103,0.970873786407767
+MobileNetV3-L,potato_peeling,Samsung Galaxy M31,83,0.7831325301204819
+MobileNetV3-L,potato_peeling,Samsung Galaxy M32,84,0.9761904761904762
+MobileNetV3-L,pumpkin,Samsung Galaxy M31,83,0.9397590361445783
+MobileNetV3-L,pumpkin,Samsung Galaxy M32,81,0.9753086419753086
+MobileNetV3-L,sugarcane,Samsung Galaxy M31,106,0.9905660377358491
+MobileNetV3-L,sugarcane,Samsung Galaxy M32,100,1.0
+MobileNetV3-L,watermelon,Samsung Galaxy M31,80,1.0
+MobileNetV3-L,watermelon,Samsung Galaxy M32,70,1.0
+Custom CNN (V0),Banana_peeling,Samsung Galaxy M31,30,0.6
+Custom CNN (V0),Banana_peeling,Samsung Galaxy M32,126,0.8968253968253969
+Custom CNN (V0),Egg,Samsung Galaxy M31,130,0.8846153846153846
+Custom CNN (V0),Egg,Samsung Galaxy M32,81,0.8765432098765432
+Custom CNN (V0),cloth,Samsung Galaxy M31,105,0.9047619047619048
+Custom CNN (V0),cloth,Samsung Galaxy M32,103,0.8737864077669902
+Custom CNN (V0),mango_peeling,Samsung Galaxy M31,70,0.38571428571428573
+Custom CNN (V0),mango_peeling,Samsung Galaxy M32,85,0.8235294117647058
+Custom CNN (V0),medicine,Samsung Galaxy M31,69,0.6376811594202898
+Custom CNN (V0),medicine,Samsung Galaxy M32,100,0.69
+Custom CNN (V0),nut,Samsung Galaxy M32,82,0.8292682926829268
+Custom CNN (V0),nut,vivo Y20i,83,0.8795180722891566
+Custom CNN (V0),orange_peeling,Samsung Galaxy M31,142,0.8943661971830986
+Custom CNN (V0),orange_peeling,Samsung Galaxy M32,69,0.9130434782608695
+Custom CNN (V0),packet,Samsung Galaxy M31,110,0.9545454545454546
+Custom CNN (V0),packet,Samsung Galaxy M32,101,0.9900990099009901
+Custom CNN (V0),pen,Samsung Galaxy M31,87,0.896551724137931
+Custom CNN (V0),pen,Samsung Galaxy M32,103,0.7669902912621359
+Custom CNN (V0),potato_peeling,Samsung Galaxy M31,83,0.46987951807228917
+Custom CNN (V0),potato_peeling,Samsung Galaxy M32,84,0.5119047619047619
+Custom CNN (V0),pumpkin,Samsung Galaxy M31,83,0.6506024096385542
+Custom CNN (V0),pumpkin,Samsung Galaxy M32,81,0.49382716049382713
+Custom CNN (V0),sugarcane,Samsung Galaxy M31,106,0.8113207547169812
+Custom CNN (V0),sugarcane,Samsung Galaxy M32,100,0.94
+Custom CNN (V0),watermelon,Samsung Galaxy M31,80,0.775
+Custom CNN (V0),watermelon,Samsung Galaxy M32,70,0.7857142857142857

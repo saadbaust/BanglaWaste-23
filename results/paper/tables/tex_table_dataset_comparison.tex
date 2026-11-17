@@ -1,0 +1,25 @@
+\begin{table*}[!htbp]
+\centering
+\scriptsize
+\caption{Public waste image datasets compared with BanglaWaste-23 (evaluation split as used in the original paper).}
+\label{tab:datasets}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrllll@{}}
+\toprule
+Dataset & Year & Images & Classes & Source & Medical waste & Object IDs & Evaluation split \\
+\midrule
+TrashNet \citep{yang2016trashnet} & 2016 & 2,527 & 6 & Real, staged on white board & No & No & Not stated \\
+TACO \citep{proenca2020taco} & 2020 & 1,500 & 60 & Real, crowdsourced litter & No & No & Random, image-level \\
+TrashBox \citep{kumsetty2022trashbox} & 2022 & 17,785 & 7 & Web-scraped & Yes (web) & No & Not stated \\
+ZeroWaste-f \citep{bashkirova2022zerowaste} & 2022 & 4,661 & 4 & Real, recycling conveyor & No & No & Not stated \\
+Zhou et al. \citep{zhou2022medical} & 2022 & 3,480 & 8 & Real, hospital (China) & Yes (all) & No & Random, image-level \\
+RealWaste \citep{single2023realwaste} & 2023 & 4,808 & 9 & Real, landfill & No & No & Random, image-level \\
+Medical Waste 4.0 \citep{bruno2023medical} & 2023 & >1,400 & 7 & Real, new unused items & Yes (all) & No & Different-day test set \\
+BDWaste \citep{rahman2024bdwaste} & 2024 & 2,497 & 20 & Real, street (Dhaka) & Street-collected & No & Random, image-level \\
+TrashNeXt \citep{tanvir2025trashnext} & 2025 & 23,625 & 9 & Merged public sets & Yes (merged) & No & Random, image-level \\
+Garbage Dataset \citep{kunwar2026garbage} & 2026 & 12,259 & 10 & App, web and community & No & No & Random, image-level \\
+\textbf{BanglaWaste-23 (ours)} & \textbf{2026} & \textbf{4,160} & \textbf{23} & \textbf{Real, households and hospital} & \textbf{Yes (4 classes, hospital)} & \textbf{Yes (172 objects)} & \textbf{Object-disjoint 5-fold} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

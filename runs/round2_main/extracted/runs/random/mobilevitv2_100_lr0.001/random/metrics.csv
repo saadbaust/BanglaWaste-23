@@ -1,0 +1,2 @@
+run,split,fold,eval_set,model,timm_tag,pretrained,lr,epochs,batch,weight_decay,warmup_epochs,ema_decay,seed,params,macs_M,train_images,eval_images,minutes,sec_per_epoch,gpu_infer_img_per_s,cache_in_ram,gpu,torch,timm,mean,std,slot,accuracy,macro_f1,balanced_accuracy,weighted_f1
+mobilevitv2_100_lr0.001,random,,test,mobilevitv2_100,mobilevitv2_100.cvnets_in1k,True,0.001,40,32,0.0001,5,0.999,42,4400640,1411.658496,2912,624,8.617034423351289,12.92555165886879,441.0083595001251,True,Tesla T4,2.11.0+cu130,1.0.30,"[0.0, 0.0, 0.0]","[1.0, 1.0, 1.0]",waste_R2_acc3_nb2,1.0,1.0,1.0,1.0

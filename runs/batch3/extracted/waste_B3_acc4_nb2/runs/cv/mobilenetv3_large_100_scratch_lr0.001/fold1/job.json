@@ -1,0 +1,7 @@
+{
+  "model": "mobilenetv3_large_100_scratch",
+  "lr": 0.001,
+  "epochs": 150,
+  "split": "cv",
+  "fold": 1
+}

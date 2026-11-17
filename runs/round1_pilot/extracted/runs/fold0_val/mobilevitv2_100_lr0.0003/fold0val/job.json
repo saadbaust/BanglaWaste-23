@@ -1,0 +1,6 @@
+{
+  "model": "mobilevitv2_100",
+  "lr": 0.0003,
+  "epochs": 80,
+  "split": "fold0_val"
+}

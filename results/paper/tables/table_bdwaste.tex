@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Cross-dataset test: models trained on all BanglaWaste-23 images, tested on the BDWaste images of the 11 shared classes.}
+\label{tab:table_bdwaste}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Images & Accuracy, 23-way \% & Accuracy, 11 shared classes \% & Macro-F1, 11 shared classes \% \\
+\midrule
+MobileNetV3-L & 1390 & 73.09 & 83.02 & 79.18 \\
+ConvNeXt-T & 1390 & 78.85 & 80.14 & 75.04 \\
+EfficientNet-B0 & 1390 & 72.66 & 75.97 & 71.57 \\
+Custom CNN (V0) & 1390 & 40.58 & 55.76 & 52.52 \\
+\bottomrule
+\end{tabular}
+\end{table}

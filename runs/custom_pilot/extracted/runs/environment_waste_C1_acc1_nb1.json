@@ -1,0 +1,16 @@
+{
+  "slot": "waste_C1_acc1_nb1",
+  "jobs": [
+    {
+      "model": "custom_v0",
+      "lr": 0.001,
+      "epochs": 200,
+      "split": "fold0_val"
+    }
+  ],
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "gpu": "Tesla T4",
+  "finished": "2026-11-16 14:40:02"
+}

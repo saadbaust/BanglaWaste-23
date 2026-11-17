@@ -1,0 +1,30 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{Classification of unseen objects (object-disjoint 5-fold cross-validation, 4,160 images). Macro-F1 is given as the mean $\pm$ SD over folds and pooled over all out-of-fold predictions with a 95\% confidence interval from an object-level bootstrap (2,000 resamples). $p$: McNemar test against the best model (ConvNeXt-T), Holm-corrected.}
+\label{tab:main}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrlccc@{}}
+\toprule
+Model & Params (M) & MACs (M) & LR & Macro-F1 (\%), fold mean & Pooled macro-F1 (\%) [95\% CI] & $p$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{ImageNet-pretrained, fully fine-tuned (40 epochs)}} \\
+ConvNeXt-T & 27.84 & 4,455 & 0.0003 & 97.99 $\pm$ 2.69 & \textbf{98.82} [94.5, 99.4] & -- \\
+ResNet-50 & 23.56 & 4,087 & 0.0003 & 97.76 $\pm$ 2.75 & 98.62 [94.2, 99.1] & 0.27 \\
+MobileViTv2 & 4.40 & 1,412 & 0.001 & 97.71 $\pm$ 2.40 & 98.52 [94.2, 99.0] & 0.27 \\
+DenseNet-121 & 6.98 & 2,833 & 0.0001 & 97.65 $\pm$ 2.45 & 98.47 [94.1, 99.1] & 0.18 \\
+DeiT-S & 21.67 & 4,599 & 0.0001 & 97.43 $\pm$ 2.84 & 98.37 [93.9, 99.0] & 0.06 \\
+EfficientNet-B0 & 4.04 & 385 & 0.0003 & 97.43 $\pm$ 2.61 & 98.29 [93.9, 98.9] & 0.06 \\
+MobileNetV3-L & 4.23 & 215 & 0.001 & 97.05 $\pm$ 2.79 & 97.91 [93.3, 98.7] & $<$0.001 \\
+MobileNetV2 & 2.25 & 300 & 0.0003 & 97.07 $\pm$ 2.27 & 97.80 [93.3, 98.4] & $<$0.001 \\
+GhostNetV2 & 4.91 & 166 & 0.0003 & 96.78 $\pm$ 3.41 & 97.76 [93.3, 98.3] & $<$0.001 \\
+EfficientFormerV2-S0 & 3.25 & 396 & 0.001 & 96.60 $\pm$ 3.16 & 97.43 [93.1, 98.2] & $<$0.001 \\
+MobileNetV4-S & 2.52 & 185 & 0.0001 & 95.11 $\pm$ 4.02 & 96.03 [91.7, 96.8] & $<$0.001 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Trained from scratch (150 epochs)}} \\
+Custom CNN (V0) & 0.38 & 165 & 0.001 & 79.92 $\pm$ 3.27 & 81.42 [75.6, 83.0] & $<$0.001 \\
+MobileNetV3-L & 4.23 & 215 & 0.001 & 78.14 $\pm$ 4.61 & 79.54 [73.4, 81.6] & $<$0.001 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

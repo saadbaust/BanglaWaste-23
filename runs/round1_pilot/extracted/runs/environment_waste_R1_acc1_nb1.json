@@ -1,0 +1,40 @@
+{
+  "slot": "waste_R1_acc1_nb1",
+  "jobs": [
+    {
+      "model": "mobilevitv2_100",
+      "lr": 0.001,
+      "epochs": 80,
+      "split": "fold0_val"
+    },
+    {
+      "model": "densenet121",
+      "lr": 0.001,
+      "epochs": 80,
+      "split": "fold0_val"
+    },
+    {
+      "model": "deit_small_patch16_224",
+      "lr": 0.001,
+      "epochs": 80,
+      "split": "fold0_val"
+    },
+    {
+      "model": "efficientnet_b0",
+      "lr": 0.001,
+      "epochs": 80,
+      "split": "fold0_val"
+    },
+    {
+      "model": "efficientformerv2_s0",
+      "lr": 0.001,
+      "epochs": 80,
+      "split": "fold0_val"
+    }
+  ],
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "gpu": "Tesla T4",
+  "finished": "2026-11-16 06:57:52"
+}

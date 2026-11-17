@@ -1,0 +1,7 @@
+{
+  "model": "mobilevitv2_100",
+  "lr": 0.001,
+  "epochs": 40,
+  "split": "cv",
+  "fold": 1
+}

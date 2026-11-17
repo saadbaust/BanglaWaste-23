@@ -1,0 +1,16 @@
+Object,Images,Fold,Mean accuracy % (11 pretrained),Worst model %,ConvNeXt-T %
+potato_peeling_obj01,7,4,0.0,0.0,0.0
+mango_peeling_obj08,7,2,10.4,0.0,14.3
+Lemon_obj01,6,4,45.5,0.0,0.0
+cucumber_peeling_obj01,9,4,76.8,44.4,88.9
+mango_peeling_obj02,23,2,79.1,60.9,100.0
+potato_peeling_obj04,48,1,80.1,70.8,72.9
+mango_peeling_obj01,40,4,81.6,55.0,95.0
+pointed_gourd_peeling_obj08,8,4,86.4,62.5,87.5
+potato_peeling_obj05,20,2,86.4,70.0,90.0
+pointed_gourd_peeling_obj06,33,2,90.6,81.8,97.0
+pumpkin_obj06,10,0,90.9,70.0,100.0
+cucumber_peeling_obj04,16,4,92.6,87.5,100.0
+medicine_obj01,26,2,93.0,80.8,92.3
+pumpkin_obj09,20,0,93.2,80.0,100.0
+potato_peeling_obj03,77,0,93.9,85.7,98.7

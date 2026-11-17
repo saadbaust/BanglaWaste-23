@@ -1,0 +1,43 @@
+{
+  "run": "mobilevitv2_100_lr0.001",
+  "split": "cv",
+  "fold": 0,
+  "eval_set": "test",
+  "model": "mobilevitv2_100",
+  "timm_tag": "mobilevitv2_100.cvnets_in1k",
+  "pretrained": true,
+  "kd": "",
+  "lr": 0.001,
+  "epochs": 40,
+  "batch": 32,
+  "weight_decay": 0.0001,
+  "warmup_epochs": 5,
+  "ema_decay": 0.999,
+  "seed": 42,
+  "params": 4400640,
+  "macs_M": 1411.658496,
+  "train_images": 3312,
+  "eval_images": 848,
+  "minutes": 10.102534663677215,
+  "sec_per_epoch": 15.15380203127861,
+  "gpu_infer_img_per_s": 454.88248155541254,
+  "cache_in_ram": true,
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "std": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "slot": "waste_B3_acc3_nb2",
+  "accuracy": 0.9917452830188679,
+  "macro_f1": 0.9942154421108412,
+  "balanced_accuracy": 0.9948023915646488,
+  "weighted_f1": 0.9917805336713884
+}

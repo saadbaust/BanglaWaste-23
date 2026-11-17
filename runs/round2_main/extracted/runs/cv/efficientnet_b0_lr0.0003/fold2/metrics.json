@@ -1,0 +1,42 @@
+{
+  "run": "efficientnet_b0_lr0.0003",
+  "split": "cv",
+  "fold": 2,
+  "eval_set": "test",
+  "model": "efficientnet_b0",
+  "timm_tag": "efficientnet_b0.ra_in1k",
+  "pretrained": true,
+  "lr": 0.0003,
+  "epochs": 40,
+  "batch": 32,
+  "weight_decay": 0.0001,
+  "warmup_epochs": 5,
+  "ema_decay": 0.999,
+  "seed": 44,
+  "params": 4037011,
+  "macs_M": 384.564192,
+  "train_images": 3349,
+  "eval_images": 811,
+  "minutes": 6.864036917686462,
+  "sec_per_epoch": 10.296055394411088,
+  "gpu_infer_img_per_s": 650.20038733937,
+  "cache_in_ram": true,
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "slot": "waste_R2_acc1_nb2",
+  "accuracy": 0.9765721331689272,
+  "macro_f1": 0.9664339903990709,
+  "balanced_accuracy": 0.9727305775509933,
+  "weighted_f1": 0.975737509253035
+}

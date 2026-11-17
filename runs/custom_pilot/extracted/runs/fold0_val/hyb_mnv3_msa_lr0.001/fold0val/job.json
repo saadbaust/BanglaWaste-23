@@ -1,0 +1,6 @@
+{
+  "model": "hyb_mnv3_msa",
+  "lr": 0.001,
+  "epochs": 40,
+  "split": "fold0_val"
+}

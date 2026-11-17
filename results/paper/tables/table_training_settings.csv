@@ -1,0 +1,12 @@
+Setting,Value
+Input,"224 × 224 RGB (shorter side resized to 256 px with EXIF orientation applied; random-resized crop for training, centre crop for testing)"
+Augmentation,"random resized crop (scale 0.6–1.0), horizontal and vertical flip, rotation ±20°, brightness/contrast jitter 0.15"
+Mixing,"MixUp α = 0.2 / CutMix α = 1.0, applied with probability 0.5"
+Optimiser,"AdamW, weight decay 1e-4, batch size 32, mixed precision"
+Schedule,"5 warm-up epochs, then cosine decay to 0"
+Learning rate,"per pretrained model from {1e-3, 3e-4, 1e-4} on fold-0 validation objects; 1e-3 for models trained from scratch"
+Epochs,"40 (ImageNet-pretrained), 150 (from scratch); no early stopping"
+Weights evaluated,exponential moving average (decay 0.999) of the final epoch; no test-time augmentation
+Pretraining,ImageNet-1k weights from timm for all pretrained models
+Evaluation,object-disjoint 5-fold cross-validation (172 objects; every class in every fold); seed 42 + fold
+Hardware,"NVIDIA Tesla T4 (Kaggle), PyTorch + timm"

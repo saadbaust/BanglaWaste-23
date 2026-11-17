@@ -1,0 +1,6 @@
+{
+  "model": "custom_v0",
+  "lr": 0.001,
+  "epochs": 150,
+  "split": "all_bdwaste"
+}

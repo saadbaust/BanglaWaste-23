@@ -1,0 +1,3 @@
+Model,Original %,JPEG q30 %,96-px low-res %,Images re-routed to malta
+ConvNeXt-T,97.99,96.71,96.37,0
+EfficientNet-B0,97.43,96.06,94.71,4

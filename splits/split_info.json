@@ -1,0 +1,55 @@
+{
+  "n_images": 4160,
+  "n_classes": 23,
+  "n_objects": 172,
+  "folds_seed": 42,
+  "fold_sizes_images": [
+    848,
+    936,
+    811,
+    740,
+    825
+  ],
+  "fold_sizes_objects": [
+    32,
+    33,
+    32,
+    38,
+    37
+  ],
+  "fold0_inner": {
+    "train_images": 2689,
+    "val_images": 623,
+    "val_objects": [
+      "Banana_peeling_obj02",
+      "Bottle_obj04",
+      "Egg_obj02",
+      "Injection_obj01",
+      "Lemon_obj01",
+      "cloth_obj07",
+      "cotton_obj01",
+      "cucumber_peeling_obj07",
+      "malta_peeling_obj02",
+      "mango_leaf_obj02",
+      "mango_peeling_obj06",
+      "medicine_obj04",
+      "nut_obj01",
+      "orange_peeling_obj08",
+      "packet_obj01",
+      "pen_obj02",
+      "pointed_gourd_peeling_obj02",
+      "polythene_obj07",
+      "potato_peeling_obj04",
+      "pumpkin_obj07",
+      "saline_obj02",
+      "sugarcane_obj02",
+      "watermelon_obj02"
+    ]
+  },
+  "random_split_sizes": {
+    "train": 2912,
+    "val": 624,
+    "test": 624
+  },
+  "random_split_objects_shared_train_test": 155
+}

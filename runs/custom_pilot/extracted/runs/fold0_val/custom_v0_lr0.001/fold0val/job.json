@@ -1,0 +1,6 @@
+{
+  "model": "custom_v0",
+  "lr": 0.001,
+  "epochs": 200,
+  "split": "fold0_val"
+}

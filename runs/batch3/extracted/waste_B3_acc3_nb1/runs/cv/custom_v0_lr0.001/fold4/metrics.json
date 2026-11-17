@@ -1,0 +1,43 @@
+{
+  "run": "custom_v0_lr0.001",
+  "split": "cv",
+  "fold": 4,
+  "eval_set": "test",
+  "model": "custom_v0",
+  "timm_tag": "custom_v0",
+  "pretrained": false,
+  "kd": "",
+  "lr": 0.001,
+  "epochs": 150,
+  "batch": 32,
+  "weight_decay": 0.0001,
+  "warmup_epochs": 5,
+  "ema_decay": 0.999,
+  "seed": 46,
+  "params": 378263,
+  "macs_M": 165.126208,
+  "train_images": 3335,
+  "eval_images": 825,
+  "minutes": 23.497493064403535,
+  "sec_per_epoch": 9.3989972337087,
+  "gpu_infer_img_per_s": 745.1468026936653,
+  "cache_in_ram": true,
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "slot": "waste_B3_acc3_nb1",
+  "accuracy": 0.8096969696969697,
+  "macro_f1": 0.7614600366845812,
+  "balanced_accuracy": 0.7734929847167529,
+  "weighted_f1": 0.8019102859519874
+}

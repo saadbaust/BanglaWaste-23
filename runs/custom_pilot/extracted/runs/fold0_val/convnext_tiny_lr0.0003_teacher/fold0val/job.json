@@ -1,0 +1,8 @@
+{
+  "model": "convnext_tiny",
+  "lr": 0.0003,
+  "epochs": 40,
+  "split": "fold0_val",
+  "fold": null,
+  "pretrained_override": true
+}

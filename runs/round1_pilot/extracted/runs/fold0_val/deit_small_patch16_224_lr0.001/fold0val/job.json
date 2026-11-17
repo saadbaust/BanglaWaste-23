@@ -1,0 +1,6 @@
+{
+  "model": "deit_small_patch16_224",
+  "lr": 0.001,
+  "epochs": 80,
+  "split": "fold0_val"
+}
