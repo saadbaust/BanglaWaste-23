@@ -3,7 +3,8 @@
 Run after waste_make_figures_tables.py, from the Claude folder:
     python code/paper/waste_make_manuscript_items.py
 
-Makes   results/paper/figures/fig_split_protocol, fig_crossregion_shortcut (PDF + PNG)
+Makes   results/paper/figures/fig_samples (needs the raw images), fig_split_protocol, fig_crossregion_shortcut,
+        fig_s_workflow, fig_s_class_distribution (PDF + PNG)
         results/paper/tables/table_dataset_comparison (CSV) and journal-style LaTeX tables
 Copies  main / supplementary figures to  manuscript/figures/{main,supp}
         and figures + tables to  manuscript/overleaf/{figures,tables}/{main,supp}
@@ -25,101 +26,161 @@ SH_ = ROOT / "manuscript"                      # figures/ lives here
 OV = ROOT / "manuscript" / "overleaf"
 CM = pd.read_csv(RES / "class_map.csv"); ITEM = dict(zip(CM.class_folder, CM.item_name))
 
-INK, INK2, MUTED, GRID, BASE = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
-C_PRE, C_SCR, C_RAND, C_GREEN = "#2a78d6", "#eb6834", "#898781", "#1baf7a"
+C_PRE, C_SCR, C_GREEN = "#2a78d6", "#eb6834", "#1baf7a"     # blue, orange, green (colours as before)
 SEQ = LinearSegmentedColormap.from_list("seq", ["#fcfcfb", "#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"])
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5, "axes.edgecolor": BASE, "axes.labelcolor": INK2,
-                     "xtick.color": INK2, "ytick.color": INK2, "axes.titlesize": 9.5, "axes.titleweight": "bold",
-                     "axes.spines.top": False, "axes.spines.right": False, "legend.frameon": False,
-                     "savefig.dpi": 300, "savefig.bbox": "tight", "pdf.fonttype": 42})
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+import waste_figstyle as FS                     # paper font, text width, (a)/(b) under panels
+FS.apply(); W = FS.TEXTWIDTH
+from matplotlib.patches import Patch
 NICE = {"convnext_tiny": "ConvNeXt-T", "mobilenetv3_large_100": "MobileNetV3-L", "efficientnet_b0": "EfficientNet-B0",
         "custom_v0": "Custom CNN (V0)"}
 def save(fig, name):
     for ext in ("pdf", "png"): fig.savefig(FIG / f"{name}.{ext}")
     plt.close(fig)
 
-# ============================================================ Figure: split protocol
-OBJ_COL = ["#2a78d6", "#1baf7a", "#eb6834", "#9b59b6", "#d4a017"]
-fig, (axa, axb) = plt.subplots(1, 2, figsize=(7.2, 3.3), gridspec_kw={"width_ratios": [1, 1.35]})
-for ax in (axa, axb):
-    ax.set_xlim(0, 10); ax.set_ylim(0, 10); ax.axis("off")
+# ============================================================ Figure 1: one image per class (sub-figures (a)-(w), item names)
+# Order: food and plant (a-n), household non-food (o-s), medical (t-w); alphabetical by item within each group.
+import os
+SAMPLE = {"Banana_peeling": "Banana_peeling_img_00034.jpg", "Bottle": "Bottle_img_00158.jpg", "cloth": "cloth_img_00067.jpg",
+          "cotton": "cotton_img_00139.jpg", "cucumber_peeling": "cucumber_peeling_img_00060.jpg", "Egg": "Egg_img_00152.jpg",
+          "Injection": "Injection_img_00122.jpg", "Lemon": "Lemon_img_00102.jpg", "malta_peeling": "malta_peeling_img_00133.jpg",
+          "mango_leaf": "mango_leaf_img_00112.jpg", "mango_peeling": "mango_peeling_img_00147.jpg", "medicine": "medicine_img_00087.jpg",
+          "nut": "nut_img_00139.jpg", "orange_peeling": "orange_peeling_img_00147.jpg", "packet": "packet_img_00124.jpg",
+          "pen": "pen_img_00018.jpg", "pointed_gourd_peeling": "pointed_gourd_peeling_img_00110.jpg", "polythene": "polythene_img_00151.jpg",
+          "potato_peeling": "potato_peeling_img_00010.jpg", "pumpkin": "pumpkin_img_00009.jpg", "saline": "saline_img_00068.jpg",
+          "sugarcane": "sugarcane_img_00087.jpg", "watermelon": "watermelon_img_00027.jpg"}   # same images as the earlier figure
+GROUP_ORDER = ["Food and plant", "Household non-food", "Medical"]
+CLS = CM.assign(g=CM.group.map(GROUP_ORDER.index), i=CM.item_name.str.lower()).sort_values(["g", "i"]).reset_index(drop=True)
+LETTERS = "abcdefghijklmnopqrstuvwxyz"
+RAWS = [Path(p) / "BanglaWaste-23-raw" for p in [os.environ.get("BANGLAWASTE_ROOT", ""), r"E:\students\BanglaWaste-23", str(ROOT.parent / "BanglaWaste-23")] if p]
+RAW = next((p for p in RAWS if p.exists()), None)
+if RAW is None:
+    print("raw images not found (set BANGLAWASTE_ROOT): Figure 1 not rebuilt")
+else:
+    from PIL import ImageOps
+    cols, rows = 6, 4; tile = W / cols
+    fig, axes = plt.subplots(rows, cols, figsize=(W, rows * (tile + 0.3)))
+    for a in axes.ravel(): a.axis("off")
+    for k, r in CLS.iterrows():
+        with Image.open(RAW / r.class_folder / SAMPLE[r.class_folder]) as im:
+            im.draft("RGB", (800, 800)); im = ImageOps.exif_transpose(im).convert("RGB")
+            s_ = min(im.size); l_, t_ = (im.size[0] - s_) // 2, (im.size[1] - s_) // 2
+            im = im.crop((l_, t_, l_ + s_, t_ + s_)).resize((480, 480), Image.LANCZOS)
+        ax = axes.ravel()[k]; ax.imshow(np.asarray(im))
+        name = r.item_name.replace(" (IV infusion)", "")
+        if len(name) > 14: name = "\n".join(name.rsplit(" ", 1))          # two lines for long names
+        ax.text(0.5, -0.04, f"({LETTERS[k]}) {name}", transform=ax.transAxes, ha="center", va="top", fontsize=7.5, linespacing=1.0)
+    fig.subplots_adjust(left=0.005, right=0.995, top=0.995, bottom=0.06, wspace=0.06, hspace=0.36)
+    save(fig, "fig_samples")
+    CLS.assign(letter=[LETTERS[k] for k in range(len(CLS))])[["letter", "class_folder", "item_name", "group"]].to_csv(TAB / "fig_samples_panels.csv", index=False)
 
-# (a) random image-level split: images of each object fall into both train and test
-axa.set_title("(a) Random image-level split", loc="left")
-axa.text(0.1, 9.0, "Images of the same physical object", fontsize=7.5, color=INK2)
+# ============================================================ Figure 2: split protocol (no titles; explanation in the caption)
+OBJ_COL = ["#2a78d6", "#1baf7a", "#eb6834", "#9b59b6", "#d4a017"]
+fig, (axa, axb) = plt.subplots(1, 2, figsize=(W, 1.95), gridspec_kw={"width_ratios": [1, 1.45]})
+for ax in (axa, axb):
+    ax.set_xlim(0, 10); ax.set_ylim(0, 8.2); ax.axis("off")
 rng = np.random.default_rng(3)
-for r, (name, col) in enumerate(zip(["Object 1", "Object 2", "Object 3"], OBJ_COL[:3])):
-    y = 7.6 - r * 1.25
-    axa.text(0.1, y + 0.25, name, fontsize=7.5, color=INK, va="center")
+for r_, (name, col) in enumerate(zip(["Object 1", "Object 2", "Object 3"], OBJ_COL[:3])):
+    y = 6.6 - r_ * 1.6
+    axa.text(0.0, y + 0.3, name, fontsize=8, va="center")
     test = set(rng.choice(7, 2, replace=False))
     for j in range(7):
-        x = 2.0 + j * 0.62
-        axa.add_patch(Rectangle((x, y), 0.5, 0.5, facecolor=col if j not in test else "white", edgecolor=col, lw=1.4,
-                                hatch="////" if j in test else None))
-# legend + result boxes
-axa.add_patch(Rectangle((0.2, 2.75), 0.45, 0.45, facecolor=MUTED, edgecolor=MUTED)); axa.text(0.85, 2.97, "train image", fontsize=7, va="center")
-axa.add_patch(Rectangle((3.6, 2.75), 0.45, 0.45, facecolor="white", edgecolor=MUTED, hatch="////")); axa.text(4.25, 2.97, "test image", fontsize=7, va="center")
-axa.add_patch(FancyBboxPatch((0.15, 0.2), 9.6, 2.0, boxstyle="round,pad=0.05,rounding_size=0.2", facecolor="#fdece4", edgecolor=C_SCR, lw=1))
-axa.text(0.4, 1.2, "Every object appears in both train and test\n(BanglaWaste-23: 155 of 172 objects) → the\nmodel is tested on objects it has already seen",
-         fontsize=7.2, va="center", color=INK)
-
-# (b) object-disjoint 5-fold CV
-axb.set_title("(b) Object-disjoint 5-fold cross-validation (ours)", loc="left")
-axb.text(0.1, 9.0, "Whole objects are assigned to folds; every class is in every fold", fontsize=7.5, color=INK2)
-x0, w, gap = 1.7, 1.45, 0.17
+        x = 2.6 + j * 1.0
+        axa.add_patch(Rectangle((x, y), 0.75, 0.75, facecolor=col if j not in test else "white", edgecolor=col, lw=1.1,
+                                hatch="//////" if j in test else None))
+axa.add_patch(Rectangle((0.2, 0.9), 0.7, 0.7, facecolor=FS.MID, edgecolor=FS.MID)); axa.text(1.15, 1.25, "training image", fontsize=8, va="center")
+axa.add_patch(Rectangle((5.3, 0.9), 0.7, 0.7, facecolor="white", edgecolor=FS.MID, hatch="//////")); axa.text(6.25, 1.25, "test image", fontsize=8, va="center")
+x0, w_, gap = 1.75, 1.45, 0.2
 for k in range(5):
-    x = x0 + k * (w + gap); test = k == 0
-    axb.add_patch(FancyBboxPatch((x, 3.35), w, 5.0, boxstyle="round,pad=0.02,rounding_size=0.12",
+    x = x0 + k * (w_ + gap); test = k == 0
+    axb.add_patch(FancyBboxPatch((x, 0.75), w_, 6.6, boxstyle="round,pad=0.02,rounding_size=0.12",
                                  facecolor="#fdece4" if test else "#eaf2fc", edgecolor=C_SCR if test else C_PRE, lw=1.3 if test else 0.8))
-    axb.text(x + w / 2, 7.95, f"Fold {k + 1}", ha="center", fontsize=7.5, color=INK, fontweight="bold")
-    axb.text(x + w / 2, 3.6, "test" if test else "train", ha="center", fontsize=7.2, color=C_SCR if test else C_PRE)
-for r, cls in enumerate(["Class A", "Class B", "Class C"]):
-    y = 6.75 - r * 1.05
-    axb.text(0.05, y + 0.2, cls, fontsize=7.2, color=INK, va="center")
+    axb.text(x + w_ / 2, 6.85, f"Fold {k + 1}", ha="center", fontsize=8, fontweight="bold")
+    axb.text(x + w_ / 2, 1.1, "test" if test else "train", ha="center", fontsize=8, color=C_SCR if test else C_PRE)
+for r_, cls in enumerate(["Class A", "Class B", "Class C"]):
+    y = 5.25 - r_ * 1.35
+    axb.text(0.0, y + 0.25, cls, fontsize=8, va="center")
     for k in range(5):
-        x = x0 + k * (w + gap) + 0.25
-        n = 1 if (k + r) % 3 else 2                               # some folds hold two objects of a class
-        for s in range(n):
-            col = OBJ_COL[(r * 2 + k + s) % 5]
-            for d in range(3):                                    # a small stack = several images of one object
-                axb.add_patch(Rectangle((x + s * 0.55 + d * 0.06, y + d * 0.06), 0.42, 0.42, facecolor=col, edgecolor="white", lw=0.6))
-axb.add_patch(FancyBboxPatch((0.15, 0.2), 9.7, 2.6, boxstyle="round,pad=0.05,rounding_size=0.2", facecolor="#eaf2fc", edgecolor=C_PRE, lw=1))
-axb.text(0.4, 1.5, "• Each object in exactly one fold; 5 rounds, each fold tested once\n"
-                   "• Tuning (learning rate, epochs): one object per class held out\n   from the training folds; test folds never used for decisions\n"
-                   "• Pooled out-of-fold predictions for all 4,160 images",
-         fontsize=7.0, va="center", color=INK)
-fig.tight_layout(w_pad=1.2); save(fig, "fig_split_protocol")
+        x = x0 + k * (w_ + gap) + 0.16
+        n = 1 if (k + r_) % 3 else 2
+        for s_ in range(n):
+            col = OBJ_COL[(r_ * 2 + k + s_) % 5]
+            for d in range(3):
+                axb.add_patch(Rectangle((x + s_ * 0.6 + d * 0.06, y + d * 0.06), 0.4, 0.4, facecolor=col, edgecolor="white", lw=0.5))
+fig.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.12, wspace=0.08)
+FS.label_panels(fig, [(axa, "a"), (axb, "b")], pad=0.0)
+save(fig, "fig_split_protocol")
 
-# ============================================================ Figure: cross-region + shortcut
+# ============================================================ Figure 5: cross-region (a) + shortcut (b), no titles
 BP = pd.read_csv(B3 / "bdwaste_per_class.csv"); BS = pd.read_csv(B3 / "bdwaste_summary.csv")
 order_m = ["mobilenetv3_large_100", "convnext_tiny", "efficientnet_b0", "custom_v0"]
 bp = BP.pivot(index="class", columns="model", values="acc_restricted")[order_m] * 100
 bp = bp.loc[sorted(bp.index, key=lambda c: -bp.loc[c].mean())]
 overall = BS.set_index("model").acc_restricted_to_shared.reindex(order_m) * 100
-mat = np.vstack([bp.values, overall.values]); rows = [ITEM[c] for c in bp.index] + ["All 11 classes"]
+mat = np.vstack([bp.values, overall.values]); rows_ = [ITEM[c] for c in bp.index] + ["All 11 classes"]
 SH = pd.read_csv(B3 / "shortcut_summary.csv")
-fig = plt.figure(figsize=(7.2, 3.9)); gs = fig.add_gridspec(1, 2, width_ratios=[1.15, 1], wspace=0.55)
+NICE2 = {k: v.replace("Custom CNN (V0)", "Custom CNN V0") for k, v in NICE.items()}
+fig = plt.figure(figsize=(W, 3.35)); gs = fig.add_gridspec(1, 2, width_ratios=[1.05, 1], wspace=0.8)
 ax = fig.add_subplot(gs[0]); im = ax.imshow(mat, cmap=SEQ, vmin=0, vmax=100, aspect="auto")
-ax.axhline(len(bp) - 0.5, color="white", lw=3)
-ax.set_xticks(range(4), [NICE[m] for m in order_m], rotation=30, ha="right", fontsize=7.5); ax.set_yticks(range(len(rows)), rows, fontsize=7.5)
+ax.axhline(len(bp) - 0.5, color="white", lw=2.5)
+ax.set_xticks(range(4), [NICE2[m] for m in order_m], rotation=35, ha="right", fontsize=7.5); ax.set_yticks(range(len(rows_)), rows_, fontsize=7.5)
 ax.get_yticklabels()[-1].set_fontweight("bold")
 for i in range(mat.shape[0]):
     for j in range(mat.shape[1]):
-        v = mat[i, j]; ax.text(j, i, f"{v:.0f}", ha="center", va="center", fontsize=7, color="white" if v > 55 else INK,
-                                fontweight="bold" if i == len(rows) - 1 else None)
+        v = mat[i, j]; ax.text(j, i, f"{v:.0f}", ha="center", va="center", fontsize=7, color="white" if v > 55 else FS.INK,
+                                fontweight="bold" if i == len(rows_) - 1 else None)
 ax.spines[:].set_visible(False); ax.tick_params(length=0)
-ax.set_title("(a) Cross-region test on BDWaste (Dhaka)\naccuracy %, 11 shared classes", loc="left", fontsize=8.5)
-ax2 = fig.add_subplot(gs[1]); conds = ["original", "jpeg_q30", "lowres_96"]; lab = ["Original", "JPEG\nquality 30", "96 px,\nre-enlarged"]
+cb = fig.colorbar(im, ax=ax, fraction=0.06, pad=0.03); cb.set_label("Accuracy on BDWaste (%)", fontsize=8); cb.ax.tick_params(labelsize=7); cb.outline.set_visible(False)
+ax2 = fig.add_subplot(gs[1]); conds = ["original", "jpeg_q30", "lowres_96"]; lab = ["Original", "JPEG\nq = 30", "96 px"]
 x = np.arange(3); w = 0.36
-for k, (m, col) in enumerate(zip(["convnext_tiny", "efficientnet_b0"], [C_PRE, C_GREEN])):
+for k, (m, fc_) in enumerate(zip(["convnext_tiny", "efficientnet_b0"], [C_PRE, C_GREEN])):
     v = [SH[(SH.model == m) & (SH.condition == c)].macro_f1.iloc[0] * 100 for c in conds]
-    ax2.bar(x + (k - 0.5) * (w + 0.03), v, w, color=col, label=NICE[m], zorder=2)
-    for xi, vi in zip(x, v): ax2.text(xi + (k - 0.5) * (w + 0.03), vi + 0.25, f"{vi:.1f}", ha="center", fontsize=6.8)
-ax2.set_xticks(x, lab, fontsize=7.5); ax2.set_ylim(90, 100.5); ax2.set_ylabel("Macro-F1 (%), mean of 5 folds")
-ax2.grid(axis="y", color=GRID, lw=0.6); ax2.set_axisbelow(True)
-ax2.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2, fontsize=7.2)
-ax2.set_title("(b) Shortcut test: degraded test images\n(object-disjoint folds)", loc="left", fontsize=8.5)
+    ax2.bar(x + (k - 0.5) * (w + 0.03), v, w, color=fc_, label=NICE2[m], zorder=2)
+    for xi, vi in zip(x, v): ax2.text(xi + (k - 0.5) * (w + 0.03), vi + 0.2, f"{vi:.1f}", ha="center", fontsize=6.8)
+ax2.set_xticks(x, lab, fontsize=7.5); ax2.set_ylim(90, 100.5); ax2.set_ylabel("Macro-F1 (%), mean of 5 folds", fontsize=8)
+ax2.tick_params(axis="y", labelsize=7.5); ax2.grid(axis="y", color=FS.GRID, lw=0.5); ax2.set_axisbelow(True)
+ax2.legend(loc="upper center", bbox_to_anchor=(0.5, -0.24), ncol=1, fontsize=7.5)
+FS.label_panels(fig, [(ax, "a"), (ax2, "b")])
 save(fig, "fig_crossregion_shortcut")
+
+import textwrap
+# ============================================================ Fig. S1: collection and curation workflow (redrawn in the paper font)
+STEPS = [("1. Planning", "List of target\nwaste items"), ("2. Collection", "Households, hostels,\ncanteen, street,\nhospital"),
+         ("3. Photography", "Open Camera app\non smartphones"), ("4. Merging", "All images merged\ninto one collection"),
+         ("5. Labelling", "One folder per class"), ("6. Verification", "Medical classes\nverified by a nurse"),   # as in the text (supervisor, 20 Nov 2026)
+         ("7. Screening", "Blurred, dark,\nunintentional and\nwrong-item images\nremoved"),
+         ("8. Clean-up", "Renamed; duplicates\nand images < 512 px\nremoved (821 of\n4,981 excluded)"),
+         ("9. Release", "172 objects with\nconditions; 4,160\nimages on Zenodo")]
+fig, ax = plt.subplots(figsize=(W, 3.0)); ax.set_xlim(0, 3); ax.set_ylim(0, 3); ax.axis("off")
+bw, bh = 0.86, 0.8
+pos = [(c, 2.1) for c in range(3)] + [(2 - c, 1.1) for c in range(3)] + [(c, 0.1) for c in range(3)]
+for k, ((h, body), (cx, y)) in enumerate(zip(STEPS, pos)):
+    x = cx + (1 - bw) / 2
+    ax.add_patch(FancyBboxPatch((x, y), bw, bh, boxstyle="round,pad=0.0,rounding_size=0.04", facecolor="#eaf2fc", edgecolor=C_PRE, lw=0.9))
+    ax.text(x + bw / 2, y + bh - 0.08, h, ha="center", va="top", fontsize=7.5, fontweight="bold")
+    ax.text(x + bw / 2, y + bh - 0.26, "\n".join(textwrap.wrap(body.replace("\n", " "), 22)), ha="center", va="top", fontsize=7, linespacing=1.15, wrap=False)
+for k in range(len(pos) - 1):
+    (cx0, y0), (cx1, y1) = pos[k], pos[k + 1]
+    if y0 == y1:
+        xa, xb = (cx0 + (1 + bw) / 2, cx1 + (1 - bw) / 2) if cx1 > cx0 else (cx0 + (1 - bw) / 2, cx1 + (1 + bw) / 2)
+        ax.annotate("", xy=(xb, y0 + bh / 2), xytext=(xa, y0 + bh / 2), arrowprops=dict(arrowstyle="-|>", lw=0.8, color=FS.INK2))
+    else:
+        ax.annotate("", xy=(cx1 + 0.5, y1 + bh), xytext=(cx0 + 0.5, y0), arrowprops=dict(arrowstyle="-|>", lw=0.8, color=FS.INK2))
+save(fig, "fig_s_workflow")
+
+# ============================================================ Fig. S2: images per class (groups in green / blue / orange, as before)
+CS = CLS.copy(); cnt = pd.read_csv(RES / "reference" / "fold_counts.csv", index_col=0)
+CS["n"] = CS.class_folder.map(cnt["total"] if "total" in cnt.columns else cnt.sum(1)).astype(int)
+STY = {"Food and plant": dict(facecolor=C_GREEN), "Household non-food": dict(facecolor=C_PRE), "Medical": dict(facecolor=C_SCR)}
+fig, ax = plt.subplots(figsize=(W, 4.0)); y = np.arange(len(CS))[::-1]
+for yi, r in zip(y, CS.itertuples()):
+    ax.barh(yi, r.n, 0.72, **STY[r.group])
+    ax.text(r.n + 2, yi, str(r.n), va="center", fontsize=7.5)
+ax.set_yticks(y, CS.item_name, fontsize=7.5); ax.set_xlabel("Number of images"); ax.set_xlim(0, 235); ax.tick_params(axis="y", length=0)
+ax.grid(axis="x", color=FS.GRID, lw=0.5); ax.set_axisbelow(True)
+ax.legend(handles=[Patch(label=g + " waste", **STY[g]) for g in GROUP_ORDER],
+          loc="lower center", bbox_to_anchor=(0.45, 1.0), ncol=3, fontsize=7.5)
+save(fig, "fig_s_class_distribution")
 
 # ============================================================ Tables (journal-style LaTeX)
 def latex_escape(s):
@@ -146,7 +207,7 @@ DC = pd.DataFrame([
     ("BDWaste", "rahman2024bdwaste", 2024, "2,497", "20", "Real, street (Dhaka)", "Street-collected", "No", "Random, image-level"),
     ("TrashNeXt", "tanvir2025trashnext", 2025, "23,625", "9", "Merged public sets", "Yes (merged)", "No", "Random, image-level"),
     ("Garbage Dataset", "kunwar2026garbage", 2026, "12,259", "10", "App, web and community", "No", "No", "Random, image-level"),
-    ("BanglaWaste-23 (ours)", "", 2026, "4,160", "23", "Real, households and hospital", "Yes (4 classes, hospital)", "Yes (172 objects)", "Object-disjoint 5-fold"),
+    ("BanglaWaste-23 (ours)", "", 2026, "4,160", "23", "Real, households and hospital", "Yes (4 classes)", "Yes (172 objects)", "Object-disjoint 5-fold"),
 ], columns=["Dataset", "key", "Year", "Images", "Classes", "Source", "Medical waste", "Object IDs", "Evaluation split"])
 DC.drop(columns="key").to_csv(TAB / "table_dataset_comparison.csv", index=False)
 body = []
@@ -238,10 +299,10 @@ write_table("tex_table_pilot",
             "Model & Initialisation & KD & Params (M) & MACs (M) & Epochs & Val. accuracy (\\%) & Val. macro-F1 (\\%)", body, size="\\scriptsize")
 
 # ============================================================ Copy into manuscript folders
-MAIN_FIG = {"fig_samples": ROOT / "manuscript/figures/dataset/Fig1", "fig_split_protocol": FIG / "fig_split_protocol",
+MAIN_FIG = {"fig_samples": FIG / "fig_samples", "fig_split_protocol": FIG / "fig_split_protocol",
             "fig_accuracy_vs_macs": FIG / "fig_accuracy_vs_macs", "fig_leakage": FIG / "fig_leakage",
             "fig_crossregion_shortcut": FIG / "fig_crossregion_shortcut"}
-SUPP_FIG = {"fig_s_workflow": ROOT / "manuscript/figures/dataset/Fig3", "fig_s_class_distribution": ROOT / "manuscript/figures/dataset/Fig2",
+SUPP_FIG = {"fig_s_workflow": FIG / "fig_s_workflow", "fig_s_class_distribution": FIG / "fig_s_class_distribution",
             "fig_s_fold_composition": FIG / "fig_fold_composition", "fig_s_tuning_curves": FIG / "fig_supp_tuning_curves",
             "fig_s_per_class_f1": FIG / "fig_per_class_f1", "fig_s_confusion_best": FIG / "fig_confusion_best",
             "fig_s_confusion_custom_v0": FIG / "fig_confusion_custom_v0", "fig_s_bdwaste_per_class": FIG / "fig_bdwaste_per_class"}
@@ -257,16 +318,22 @@ for base in (SH_, OV):
 for dst, src in MAIN_FIG.items():
     shutil.copy(f"{src}.pdf", OV / "figures/main" / f"{dst}.pdf")
     for ext in ("pdf", "png"): shutil.copy(f"{src}.{ext}", SH_ / "figures/main" / f"{dst}.{ext}")
+(SH_ / "figures/submission").mkdir(parents=True, exist_ok=True)          # separate figure files for the journal upload
+for k, dst in enumerate(["fig_samples", "fig_split_protocol", "fig_accuracy_vs_macs", "fig_leakage", "fig_crossregion_shortcut"], 1):
+    shutil.copy(f"{MAIN_FIG[dst]}.pdf", SH_ / "figures/submission" / f"Figure_{k}.pdf")
 for dst, src in SUPP_FIG.items():
     shutil.copy(f"{src}.pdf", OV / "figures/supp" / f"{dst}.pdf")
     for ext in ("pdf", "png"): shutil.copy(f"{src}.{ext}", SH_ / "figures/supp" / f"{dst}.{ext}")
 for dst, src in GRADCAM.items():                  # photo-heavy: JPEG keeps Overleaf small
-    im = Image.open(f"{src}.png").convert("RGB"); im.thumbnail((2400, 2400))
-    for base in (SH_, OV): im.save(base / "figures/supp" / f"{dst}.jpg", quality=88)
+    im = Image.open(f"{src}.png").convert("RGB")
+    for base in (SH_, OV): im.save(base / "figures/supp" / f"{dst}.jpg", quality=90, dpi=(300, 300))   # 300 dpi = true size in LaTeX
+import os
+if os.environ.get("WASTE_FIGURES_ONLY"):             # set this to refresh figures without touching Overleaf tables / references
+    print("WASTE_FIGURES_ONLY set: Overleaf tables and references.bib left unchanged"); MAIN_TAB, SUPP_TAB = [], []
 for n in MAIN_TAB:
     for base in (OV,): shutil.copy(TAB / f"{n}.tex", base / "tables/main" / f"{n.replace('tex_', '')}.tex")
 for n in SUPP_TAB:
     for base in (OV,): shutil.copy(TAB / f"{n}.tex", base / "tables/supp" / f"{n.replace('tex_', '')}.tex")
-shutil.copy(ROOT / "literature" / "references.bib", OV / "references.bib")
+if not os.environ.get("WASTE_FIGURES_ONLY"): shutil.copy(ROOT / "literature" / "references.bib", OV / "references.bib")
 print("main figures:", list(MAIN_FIG)); print("main tables:", MAIN_TAB)
 print("supp figures:", len(SUPP_FIG) + len(GRADCAM), "supp tables:", len(SUPP_TAB))

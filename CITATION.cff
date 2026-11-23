@@ -26,7 +26,7 @@ keywords:
   - Bangladesh
 preferred-citation:
   type: article
-  title: "BanglaWaste-23: A household and hospital waste image dataset showing that random splits overstate accuracy on unseen objects"
+  title: "Do Waste Classifiers Recognise Items They Have Never Seen? Object-Disjoint Evaluation on Household and Medical Waste"
   authors:
     - family-names: Jahan
       given-names: Nusrat

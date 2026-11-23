@@ -9,4 +9,4 @@ Medical Waste 4.0,2023,">1,400",7,"Real, new unused items",Yes (all),No,Differen
 BDWaste,2024,"2,497",20,"Real, street (Dhaka)",Street-collected,No,"Random, image-level"
 TrashNeXt,2025,"23,625",9,Merged public sets,Yes (merged),No,"Random, image-level"
 Garbage Dataset,2026,"12,259",10,"App, web and community",No,No,"Random, image-level"
-BanglaWaste-23 (ours),2026,"4,160",23,"Real, households and hospital","Yes (4 classes, hospital)",Yes (172 objects),Object-disjoint 5-fold
+BanglaWaste-23 (ours),2026,"4,160",23,"Real, households and hospital",Yes (4 classes),Yes (172 objects),Object-disjoint 5-fold

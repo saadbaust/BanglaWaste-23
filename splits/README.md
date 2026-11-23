@@ -30,8 +30,7 @@ Please cite the paper and the dataset if you use these files (full details in th
 
 ```bibtex
 @misc{jahan2026banglawaste23,
-  title         = {{BanglaWaste-23}: A household and hospital waste image dataset showing that random splits
-                   overstate accuracy on unseen objects},
+  title         = Do waste classifiers recognise items they have never seen? Object-disjoint evaluation on household and medical waste},
   author        = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
   year          = {2026},
   eprint        = {XXXX.XXXXX},

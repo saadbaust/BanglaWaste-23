@@ -14,8 +14,7 @@
 
 This repository accompanies the paper
 
-> **BanglaWaste-23: A household and hospital waste image dataset showing that random splits overstate accuracy on
-> unseen objects.**
+> **Do Waste Classifiers Recognise Items They Have Never Seen? Object-Disjoint Evaluation on Household and Medical Waste.**
 > Nusrat Jahan, Mst. Eshrat Jahan Esha, Masuma Sadia, Saad Ahmed, Md Zahim Hassan, S M Jahangir Alam. *Waste Management* (under review).
 
 It holds the data-preparation scripts, the exact evaluation splits, the training notebooks, all saved predictions and
@@ -259,8 +258,7 @@ filled in once the preprint is online; the journal reference will be added on pu
 
 ```bibtex
 @misc{jahan2026banglawaste23,
-  title         = {{BanglaWaste-23}: A household and hospital waste image dataset showing that random splits
-                   overstate accuracy on unseen objects},
+  title         = Do waste classifiers recognise items they have never seen? Object-disjoint evaluation on household and medical waste},
   author        = {Jahan, Nusrat and Esha, Mst. Eshrat Jahan and Sadia, Masuma and Ahmed, Saad and Hassan, Md Zahim and Alam, S M Jahangir},
   year          = {2026},
   eprint        = {XXXX.XXXXX},

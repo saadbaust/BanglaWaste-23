@@ -1,0 +1,24 @@
+letter,class_folder,item_name,group
+a,Banana_peeling,Banana peel,Food and plant
+b,cucumber_peeling,Cucumber peel,Food and plant
+c,Egg,Eggshell,Food and plant
+d,Lemon,Lemon waste,Food and plant
+e,malta_peeling,Malta peel,Food and plant
+f,mango_leaf,Mango leaf,Food and plant
+g,mango_peeling,Mango peel,Food and plant
+h,orange_peeling,Orange peel,Food and plant
+i,nut,Peanut shell,Food and plant
+j,pointed_gourd_peeling,Pointed gourd peel,Food and plant
+k,potato_peeling,Potato peel,Food and plant
+l,pumpkin,Pumpkin peel,Food and plant
+m,sugarcane,Sugarcane bagasse,Food and plant
+n,watermelon,Watermelon rind,Food and plant
+o,cloth,Cloth scraps,Household non-food
+p,pen,Pen,Household non-food
+q,Bottle,Plastic bottle,Household non-food
+r,polythene,Polythene bag,Household non-food
+s,packet,Snack packet,Household non-food
+t,medicine,Medicine blister pack,Medical
+u,saline,Saline (IV infusion) set,Medical
+v,Injection,Syringe,Medical
+w,cotton,Used cotton wool,Medical
